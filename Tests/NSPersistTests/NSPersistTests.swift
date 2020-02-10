@@ -9,7 +9,7 @@
 import XCTest
 import NSPersist
 
-class CoreDataStackTests: XCTestCase {
+class NSPersistTests: XCTestCase {
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,20 +20,20 @@ class CoreDataStackTests: XCTestCase {
     }
     
     func testPersistentContainerSetup() {
-        NSPersist.setup(withName: "CoreModel")
+        NSPersist.setup(withName: "TestModel")
         XCTAssertNotNil(NSPersist.shared)
     }
     
     func testAddUser() {
-        NSPersist.setup(withName: "CoreModel")
-        let user = User(context: NSPersist.shared.viewContext)
+        NSPersist.setup(withName: "TestModel")
+        let user = TestUser(context: NSPersist.shared.viewContext)
         user.name = "Test Name"
         NSPersist.shared.saveContext()
         
         //let expectation = self.expectation(description: "load_users")
         let users = NSPersist
             .shared
-            .request(User.self)
+            .request(TestUser.self)
             .get()
         
         XCTAssertTrue(users.count > 0)
@@ -42,7 +42,7 @@ class CoreDataStackTests: XCTestCase {
     }
     
     func testAsyncRequestNoRetainCycle() {
-        NSPersist.setup(withName: "CoreModel")
+        NSPersist.setup(withName: "TestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -50,8 +50,8 @@ class CoreDataStackTests: XCTestCase {
         let expectation = self.expectation(description: "async_request")
         _ = NSPersist
             .shared
-            .request(User.self, completion: {[captureObject] (request) in
-                request.predicate = NSPredicate(format: "name = %@", "Martin")
+            .request(TestUser.self, completion: {[captureObject] (request) in
+                request.predicate = NSPredicate(format: "name = %@", "Test Name")
                 _ = captureObject
             })
             .getAsync(completion: { [weak captureObject] users in
@@ -65,7 +65,7 @@ class CoreDataStackTests: XCTestCase {
     }
     
     func testFetchRequestNoRetainCycle() {
-        NSPersist.setup(withName: "CoreModel")
+        NSPersist.setup(withName: "TestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -74,7 +74,7 @@ class CoreDataStackTests: XCTestCase {
         
         _ = NSPersist
             .shared
-            .request(User.self, completion: {[captureObject] (request) in
+            .request(TestUser.self, completion: {[captureObject] (request) in
                 request.predicate = NSPredicate(format: "name = %@", "Martin")
                 _ = captureObject
                 expectation.fulfill()
@@ -87,7 +87,7 @@ class CoreDataStackTests: XCTestCase {
     }
     
     func testDeleteAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "CoreModel")
+        NSPersist.setup(withName: "TestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -96,7 +96,7 @@ class CoreDataStackTests: XCTestCase {
         
         NSPersist
             .shared
-            .request(User.self)
+            .request(TestUser.self)
             .deleteAsync {[captureObject] (didDelete) in
                 _ = captureObject
                 expectation.fulfill()
@@ -108,7 +108,7 @@ class CoreDataStackTests: XCTestCase {
     }
     
     func testUpdateBatchAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "CoreModel")
+        NSPersist.setup(withName: "TestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -117,7 +117,7 @@ class CoreDataStackTests: XCTestCase {
         
         NSPersist
             .shared
-            .update(User.self) { (request) in
+            .update(TestUser.self) { (request) in
                 request.predicate = NSPredicate(format: "favorite == true")
                 request.propertiesToUpdate = ["favorite" : false]
         }.updateBatchAsync {[captureObject] _ in
@@ -132,7 +132,7 @@ class CoreDataStackTests: XCTestCase {
     
     @available(iOS 13, *)
     func testBatchInsertAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "CoreModel")
+        NSPersist.setup(withName: "TestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -152,7 +152,7 @@ class CoreDataStackTests: XCTestCase {
         
         NSPersist
             .shared
-            .batchInsertAsync(User.self, objects: users) { [captureObject] _ in
+            .batchInsertAsync(TestUser.self, objects: users) { [captureObject] _ in
                 _ = captureObject
                 expectation.fulfill()
         }
