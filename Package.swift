@@ -7,8 +7,8 @@ let package = Package(
     name: "NSPersist",
     platforms: [
         .iOS(.v10),
-        .macOS(.v10.12),
-        .watchOS(.v3.0)
+        .macOS(.v10_12),
+        .watchOS(.v3_0)
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
