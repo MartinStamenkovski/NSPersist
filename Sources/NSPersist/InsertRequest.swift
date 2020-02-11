@@ -1,6 +1,6 @@
 //
 //  InsertRequest.swift
-//  CoreDataStack
+//  NSPersist
 //
 //  Created by Martin Stamenkovski on 2/10/20.
 //  Copyright © 2020 Martin Stamenkovski. All rights reserved.
@@ -8,7 +8,6 @@
 
 import CoreData
 
-@available(iOS 13, *)
 public class InsertRequest<T> where T: NSManagedObject {
     
     private init() { }
@@ -17,15 +16,16 @@ public class InsertRequest<T> where T: NSManagedObject {
         return InsertRequest<T>()
     }
     
-   public func insert(_ objects: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
+    @available(iOS 13, *)
+    public func insertBatch(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
         let entity = String(describing: T.self)
-    
+        
         let backgroundContext = NSPersist.shared.newBackgroundContext()
-    
+        
         backgroundContext.perform {
             do {
                 
-                let request = NSBatchInsertRequest(entityName: entity, objects: objects)
+                let request = NSBatchInsertRequest(entityName: entity, objects: values)
                 request.resultType = .objectIDs
                 let insertResult = try backgroundContext.execute(request) as? NSBatchInsertResult
                 
@@ -45,6 +45,26 @@ public class InsertRequest<T> where T: NSManagedObject {
                 #if DEBUG
                 print(error)
                 #endif
+            }
+        }
+    }
+}
+
+extension InsertRequest {
+    
+    public func insertAsync(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
+        let backgroundContext = NSPersist.shared.newBackgroundContext()
+        
+        backgroundContext.perform {
+            for value in values  {
+                let object = T(context: backgroundContext)
+                for (key, value) in value {
+                    object.setValue(value, forKey: key)
+                }
+            }
+            NSPersist.shared.saveContext(backgroundContext: backgroundContext)
+            DispatchQueue.main.async {
+                completion(true)
             }
         }
     }

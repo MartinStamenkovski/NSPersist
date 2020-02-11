@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     @available(iOS 13, *)
     @IBAction func refreshUsers(_ sender: Any) {
+    
         let users = [
             [
                 "name" : "Test",
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
             ]
         ]
         
-        NSPersist.shared.batchInsertAsync(User.self, objects: users) { _ in
+        NSPersist.shared.insertAsync(User.self, values: users) { didInsert in
             self.loadUsers()
         }
     }

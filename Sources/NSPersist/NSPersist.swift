@@ -1,6 +1,6 @@
 //
-//  PersistentContainer.swift
-//  CoreDataStack
+//  NSPersist.swift
+//  NSPersist
 //
 //  Created by Martin Stamenkovski on 2/8/20.
 //  Copyright © 2020 Martin Stamenkovski. All rights reserved.
@@ -59,7 +59,11 @@ extension NSPersist {
     }
     
     @available(iOS 13, *)
-    public func batchInsertAsync<T>(_ object: T.Type, objects: [[String: Any]], completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
-        InsertRequest.shared(object: object).insert(objects, completion: completion)
+    public func insertBatchAsync<T>(_ object: T.Type, values: [[String: Any]], completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
+        InsertRequest.shared(object: object).insertBatch(values, completion: completion)
+    }
+    
+    public func insertAsync<T>(_ object: T.Type, values: [[String: Any]], completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
+        InsertRequest.shared(object: object).insertAsync(values, completion: completion)
     }
 }

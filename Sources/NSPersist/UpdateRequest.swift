@@ -1,6 +1,6 @@
 //
 //  UpdateRequest.swift
-//  CoreDataStack
+//  NSPersist
 //
 //  Created by Martin Stamenkovski on 2/9/20.
 //  Copyright © 2020 Martin Stamenkovski. All rights reserved.

@@ -1,13 +1,13 @@
 //
-//  CoreDataStackTests.swift
-//  CoreDataStackTests
+//  NSPersistTests.swift
+//  NSPersistTests
 //
 //  Created by Martin Stamenkovski on 2/8/20.
 //  Copyright © 2020 Martin Stamenkovski. All rights reserved.
 //
 
 import XCTest
-import NSPersist
+@testable import NSPersist
 
 class NSPersistTests: XCTestCase {
     
