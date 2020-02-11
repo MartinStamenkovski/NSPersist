@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "NSPersist",
+    exclude: ["Example"],
     platforms: [
         .iOS(.v10),
         .macOS(.v10.12),
@@ -14,8 +15,7 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "NSPersist",
-            targets: ["NSPersist"],
-            exclude: ["Example"]),
+            targets: ["NSPersist"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
