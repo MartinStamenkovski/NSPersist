@@ -7,7 +7,7 @@ let package = Package(
     name: "NSPersist",
     platforms: [
         .iOS(.v10),
-        .OSX(.v10.12),
+        .macOS(.v10.12),
         .watchOS(.v3.0)
     ],
     products: [
