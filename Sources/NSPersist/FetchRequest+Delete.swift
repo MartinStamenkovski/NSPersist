@@ -8,7 +8,7 @@
 
 import CoreData
 
-@available(iOS 10, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0, *)
 extension FetchRequest {
     
     public func delete() {
@@ -26,6 +26,7 @@ extension FetchRequest {
         }
     }
     
+    @available(OSX 10.12, *)
     public func deleteAsync(completion: @escaping ((Bool) -> Void)) {
         
         let fetchRequest = self.fetchRequest as! NSFetchRequest<NSFetchRequestResult>

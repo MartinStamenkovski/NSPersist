@@ -8,7 +8,7 @@
 
 import CoreData
 
-@available(iOS 10, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0, *)
 public class InsertRequest<T> where T: NSManagedObject {
     
     private init() { }
@@ -17,7 +17,7 @@ public class InsertRequest<T> where T: NSManagedObject {
         return InsertRequest<T>()
     }
     
-    @available(iOS 13, *)
+    @available(iOS 13, OSX 10.15, watchOS 6.0, *)
     public func insertBatch(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
         let entity = String(describing: T.self)
         
@@ -51,6 +51,7 @@ public class InsertRequest<T> where T: NSManagedObject {
     }
 }
 
+@available(iOS 10, OSX 10.12, watchOS 3.0, *)
 extension InsertRequest {
     
     public func insertAsync(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {

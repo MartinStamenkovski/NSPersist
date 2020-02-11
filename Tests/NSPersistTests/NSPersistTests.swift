@@ -9,6 +9,7 @@
 import XCTest
 @testable import NSPersist
 
+@available(iOS 10, OSX 10.12, *)
 class NSPersistTests: XCTestCase {
     
     override func setUp() {

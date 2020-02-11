@@ -8,7 +8,7 @@
 
 import CoreData
 
-@available(iOS 10, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0,  *)
 extension NSManagedObjectContext {
     
     public static var main: NSManagedObjectContext {
