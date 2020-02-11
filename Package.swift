@@ -5,7 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "NSPersist",
-    exclude: ["Example"],
     platforms: [
         .iOS(.v10),
         .macOS(.v10.12),
