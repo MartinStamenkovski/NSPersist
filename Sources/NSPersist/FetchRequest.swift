@@ -8,6 +8,7 @@
 
 import CoreData
 
+@available(iOS 10, *)
 public final class FetchRequest<T> where T: NSManagedObject {
     
     var fetchRequest: NSFetchRequest<T>!

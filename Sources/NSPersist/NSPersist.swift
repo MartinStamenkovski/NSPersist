@@ -8,6 +8,7 @@
 
 import CoreData
 
+@available(iOS 10, *)
 public class NSPersist: NSPersistentContainer {
     
     private static var containerName: String!

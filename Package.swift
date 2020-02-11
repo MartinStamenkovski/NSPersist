@@ -23,10 +23,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "NSPersist",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources"),
         .testTarget(
             name: "NSPersistTests",
-            dependencies: ["NSPersist"]),
+            dependencies: ["NSPersist"],
+            path: "Tests"),
     ],
     swiftLanguageVersions: [.v5]
 )

@@ -8,6 +8,7 @@
 
 import CoreData
 
+@available(iOS 10, *)
 extension NSManagedObject {
     
     public func save(context: NSManagedObjectContext? = nil) {

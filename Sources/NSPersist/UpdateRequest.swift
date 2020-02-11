@@ -8,6 +8,7 @@
 
 import CoreData
 
+@available(iOS 10, *)
 public final class UpdateRequest<T> where T: NSManagedObject {
     
     private init() { }

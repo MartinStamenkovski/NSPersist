@@ -8,6 +8,7 @@
 
 import CoreData
 
+@available(iOS 10, *)
 public class InsertRequest<T> where T: NSManagedObject {
     
     private init() { }
