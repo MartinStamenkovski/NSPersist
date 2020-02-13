@@ -24,14 +24,14 @@
 		324FE1D323F5EB720022F788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1D223F5EB720022F788 /* Assets.xcassets */; };
 		324FE1E623F5EB950022F788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */; };
 		324FE1E723F5EB950022F788 /* CoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1DC23F5EB940022F788 /* CoreModel.xcdatamodeld */; };
-		324FE1E823F5EB950022F788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1DE23F5EB940022F788 /* AppDelegate.swift */; };
 		324FE1E923F5EB950022F788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DF23F5EB950022F788 /* Main.storyboard */; };
 		324FE1EA23F5EB950022F788 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E023F5EB950022F788 /* FavoritesTableViewController.swift */; };
-		324FE1EB23F5EB950022F788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E123F5EB950022F788 /* SceneDelegate.swift */; };
-		324FE1EC23F5EB950022F788 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E223F5EB950022F788 /* ViewController.swift */; };
 		324FE1ED23F5EB950022F788 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E423F5EB950022F788 /* User+CoreDataProperties.swift */; };
 		324FE1EE23F5EB950022F788 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E523F5EB950022F788 /* User+CoreDataClass.swift */; };
 		324FE1F223F5EC1A0022F788 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1EF23F5EC100022F788 /* TestModel.xcdatamodeld */; };
+		324FE1F423F5EEB00022F788 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F323F5EEB00022F788 /* ViewController.swift */; };
+		324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */; };
+		324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F723F5EF120022F788 /* AppDelegate.swift */; };
 		OBJ_29 /* FetchRequest+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* FetchRequest+Delete.swift */; };
 		OBJ_30 /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* FetchRequest.swift */; };
 		OBJ_31 /* InsertRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* InsertRequest.swift */; };
@@ -67,14 +67,14 @@
 		324FE1D723F5EB720022F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		324FE1DD23F5EB940022F788 /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
-		324FE1DE23F5EB940022F788 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../Desktop/Example/AppDelegate.swift; sourceTree = "<group>"; };
 		324FE1DF23F5EB950022F788 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		324FE1E023F5EB950022F788 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
-		324FE1E123F5EB950022F788 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../Desktop/Example/SceneDelegate.swift; sourceTree = "<group>"; };
-		324FE1E223F5EB950022F788 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../../Desktop/Example/ViewController.swift; sourceTree = "<group>"; };
 		324FE1E423F5EB950022F788 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		324FE1E523F5EB950022F788 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		324FE1F023F5EC100022F788 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
+		324FE1F323F5EEB00022F788 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		324FE1F723F5EF120022F788 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		"NSPersist::NSPersist::Product" /* NSPersist.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSPersist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"NSPersist::NSPersistTests::Product" /* NSPersistTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NSPersistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* FetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequest.swift; sourceTree = "<group>"; };
@@ -120,13 +120,13 @@
 			children = (
 				324FE1DC23F5EB940022F788 /* CoreModel.xcdatamodeld */,
 				324FE1E023F5EB950022F788 /* FavoritesTableViewController.swift */,
-				324FE1E223F5EB950022F788 /* ViewController.swift */,
+				324FE1F323F5EEB00022F788 /* ViewController.swift */,
 				324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */,
 				324FE1DF23F5EB950022F788 /* Main.storyboard */,
 				324FE1E323F5EB950022F788 /* Models */,
 				324FE1D223F5EB720022F788 /* Assets.xcassets */,
-				324FE1E123F5EB950022F788 /* SceneDelegate.swift */,
-				324FE1DE23F5EB940022F788 /* AppDelegate.swift */,
+				324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */,
+				324FE1F723F5EF120022F788 /* AppDelegate.swift */,
 				324FE1D723F5EB720022F788 /* Info.plist */,
 			);
 			path = Example;
@@ -167,7 +167,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -177,7 +177,6 @@
 				OBJ_19 /* Products */,
 				OBJ_23 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -296,7 +295,7 @@
 				en,
 				Base,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,13 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				324FE1EC23F5EB950022F788 /* ViewController.swift in Sources */,
 				324FE1EA23F5EB950022F788 /* FavoritesTableViewController.swift in Sources */,
 				324FE1ED23F5EB950022F788 /* User+CoreDataProperties.swift in Sources */,
-				324FE1E823F5EB950022F788 /* AppDelegate.swift in Sources */,
 				324FE1E723F5EB950022F788 /* CoreModel.xcdatamodeld in Sources */,
-				324FE1EB23F5EB950022F788 /* SceneDelegate.swift in Sources */,
+				324FE1F423F5EEB00022F788 /* ViewController.swift in Sources */,
+				324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */,
 				324FE1EE23F5EB950022F788 /* User+CoreDataClass.swift in Sources */,
+				324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
