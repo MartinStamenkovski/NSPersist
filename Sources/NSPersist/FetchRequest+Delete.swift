@@ -26,7 +26,6 @@ extension FetchRequest {
         }
     }
     
-    @available(OSX 10.12, *)
     public func deleteAsync(completion: @escaping ((Bool) -> Void)) {
         
         let fetchRequest = self.fetchRequest as! NSFetchRequest<NSFetchRequestResult>

@@ -1,15 +1,12 @@
 //
 //  SceneDelegate.swift
-//  CoreDataStack
+//  Example
 //
-//  Created by Martin Stamenkovski on 2/8/20.
-//  Copyright © 2020 Martin Stamenkovski. All rights reserved.
+//  Created by Martin Stamenkovski on 2/13/20.
 //
 
 import UIKit
-import NSPersist
 
-@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -20,7 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        NSPersist.setup(withName: "CoreModel")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

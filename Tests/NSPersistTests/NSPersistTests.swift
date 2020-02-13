@@ -153,7 +153,7 @@ class NSPersistTests: XCTestCase {
         
         NSPersist
             .shared
-            .batchInsertAsync(TestUser.self, objects: users) { [captureObject] _ in
+            .insertBatchAsync(TestUser.self, values: users) { [captureObject] _ in
                 _ = captureObject
                 expectation.fulfill()
         }
