@@ -30,6 +30,7 @@ extension FetchRequest {
             #endif
         }
     }
+    
     /**
      Delete request asynchronously.
         
@@ -42,7 +43,7 @@ extension FetchRequest {
      - Parameter completion:
         The block to execute  after the request finishes.
      
-        This block takes one parameter Bool, true if the reques is successful or false.
+        This block takes one parameter Bool, true if the request is successful or false.
      */
     public func deleteAsync(completion: @escaping ((Bool) -> Void)) {
         

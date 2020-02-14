@@ -7,7 +7,11 @@
 //
 
 import CoreData
-
+/**
+ Fetch Request
+ 
+ Create and perform fetch requests.
+ */
 @available(iOS 10, OSX 10.12, watchOS 3.0, *)
 public final class FetchRequest<T> where T: NSManagedObject {
     
@@ -15,6 +19,13 @@ public final class FetchRequest<T> where T: NSManagedObject {
     
     private init() { }
     
+    /**
+     Creates new Fetch Request.
+     
+     - Parameter object: NSManagedObject Type
+     - Returns
+     Fetch Request
+     */
     static func shared(object: T.Type) -> FetchRequest<T> {
         return FetchRequest<T>()
     }
@@ -25,6 +36,11 @@ public final class FetchRequest<T> where T: NSManagedObject {
         return self
     }
     
+    /**
+     Perform fetch request.
+     
+     Returns array of objects that match with the provided object and other specified criteria.
+     */
     public func get() -> [T] {
         let mainContext = NSPersist.shared.viewContext
         do {
@@ -37,13 +53,21 @@ public final class FetchRequest<T> where T: NSManagedObject {
         return []
     }
     
-    public func getAsync(completion: @escaping(([T]) -> Void)) {
+    /**
+    Perform fetch request asynchronously.
+    
+     - Parameter completion:
+        The block to execute when the request finishes.
+     
+        The block takes one parameter, array of objects that match with the provided object and specified criteria, or nil if error occurred.
+    */
+    public func getAsync(completion: @escaping(([T]?) -> Void)) {
         let mainContext = NSPersist.shared.viewContext
         let backgroundContext = NSPersist.shared.newBackgroundContext()
         
         let asyncRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (result) in
             guard let objects = result.finalResult else {
-                completion([])
+                completion(nil)
                 return
             }
             DispatchQueue.main.async {
@@ -53,7 +77,7 @@ public final class FetchRequest<T> where T: NSManagedObject {
                 completion(fetchedObjects)
             }
         }
-
+        
         do {
             try backgroundContext.execute(asyncRequest)
         } catch {

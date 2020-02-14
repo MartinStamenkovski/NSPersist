@@ -13,7 +13,7 @@ import XCTest
 class NSPersistTests: XCTestCase {
     
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        NSPersist.setup(withName: "NSPersistTestModel")
     }
     
     override func tearDown() {
@@ -21,12 +21,10 @@ class NSPersistTests: XCTestCase {
     }
     
     func testPersistentContainerSetup() {
-        NSPersist.setup(withName: "NSPersistTestModel")
         XCTAssertNotNil(NSPersist.shared)
     }
     
     func testAddUser() {
-        NSPersist.setup(withName: "NSPersistTestModel")
         let user = NSTestUser(context: NSPersist.shared.viewContext)
         user.name = "Test Name"
         NSPersist.shared.saveContext()
@@ -43,8 +41,7 @@ class NSPersistTests: XCTestCase {
     }
     
     func testAsyncRequestNoRetainCycle() {
-        NSPersist.setup(withName: "NSPersistTestModel")
-
+        
         var captureObject = NSObject()
         weak var weakObject = captureObject
         
@@ -66,8 +63,7 @@ class NSPersistTests: XCTestCase {
     }
     
     func testFetchRequestNoRetainCycle() {
-        NSPersist.setup(withName: "NSPersistTestModel")
-
+        
         var captureObject = NSObject()
         weak var weakObject = captureObject
         
@@ -87,30 +83,9 @@ class NSPersistTests: XCTestCase {
         XCTAssertNil(weakObject)
     }
     
-    func testDeleteAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "NSPersistTestModel")
-
-        var captureObject = NSObject()
-        weak var weakObject = captureObject
-        
-        let expectation = self.expectation(description: "delete_async")
-        
-        NSPersist
-            .shared
-            .request(NSTestUser.self)
-            .deleteAsync {[captureObject] (didDelete) in
-                _ = captureObject
-                expectation.fulfill()
-        }
-        
-        wait(for: [expectation], timeout: 1)
-        captureObject = NSObject()
-        XCTAssertNil(weakObject)
-    }
     
     func testUpdateBatchAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "NSPersistTestModel")
-
+        
         var captureObject = NSObject()
         weak var weakObject = captureObject
         
@@ -119,8 +94,8 @@ class NSPersistTests: XCTestCase {
         NSPersist
             .shared
             .update(NSTestUser.self) { (request) in
-                request.predicate = NSPredicate(format: "favorite == true")
-                request.propertiesToUpdate = ["favorite" : false]
+                request.predicate = NSPredicate(format: "name = %@", "Test Name")
+                request.propertiesToUpdate = ["name" : "User Update"]
         }.updateBatchAsync {[captureObject] _ in
             _ = captureObject
             expectation.fulfill()
@@ -133,27 +108,44 @@ class NSPersistTests: XCTestCase {
     
     @available(iOS 13, *)
     func testBatchInsertAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "NSPersistTestModel")
-
+        
         var captureObject = NSObject()
         weak var weakObject = captureObject
         
         let expectation = self.expectation(description: "batch_insert")
-       
+        
         let users = [
             [
                 "name" : "Test",
-                "favorite": false
             ],
             [
                 "name" : "Another user",
-                "favorite": true
             ]
         ]
         
         NSPersist
             .shared
             .insertBatchAsync(NSTestUser.self, values: users) { [captureObject] _ in
+                _ = captureObject
+                expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1)
+        captureObject = NSObject()
+        XCTAssertNil(weakObject)
+    }
+    
+    func testDeleteAsyncNoRetainCycle() {
+        
+        var captureObject = NSObject()
+        weak var weakObject = captureObject
+        
+        let expectation = self.expectation(description: "delete_async")
+        
+        NSPersist
+            .shared
+            .request(NSTestUser.self)
+            .deleteAsync {[captureObject] (didDelete) in
                 _ = captureObject
                 expectation.fulfill()
         }

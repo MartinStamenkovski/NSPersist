@@ -12,7 +12,7 @@ import CoreData
  NSPersistentContainer wrapper.
  */
 @available(iOS 10, macOS 10.12, watchOS 3.0, *)
-public class NSPersist: NSPersistentContainer {
+public final class NSPersist: NSPersistentContainer {
     
     private static var containerName: String!
     

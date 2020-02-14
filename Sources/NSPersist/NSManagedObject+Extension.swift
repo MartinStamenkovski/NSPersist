@@ -22,12 +22,21 @@ extension NSManagedObject {
         NSPersist.shared.saveContext(backgroundContext: context)
     }
     
+    /// Create request from the current NSManagedObject.
     private func request() -> NSFetchRequest<NSManagedObject>? {
         guard let entityName = self.entity.name else { return nil }
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
         return fetchRequest
     }
     
+    /**
+     Delete current object.
+     
+     - Parameter completion:
+        The block to execute when deletion finishes.
+     
+        The block takes one parameter Bool, true if the request is success or false.
+     */
     public func delete(_ completion: ((Bool) -> Void)? = nil) {
         guard let request = request() else {
             completion?(false)

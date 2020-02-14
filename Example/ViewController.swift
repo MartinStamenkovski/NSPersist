@@ -62,8 +62,10 @@ class ViewController: UIViewController {
             .request(NSExampleUser.self)
             .getAsync { [weak self] (users) in
                 guard let self = self else { return }
-                self.users = users
-                self.tableViewUsers.reloadData()
+                if let users = users {
+                    self.users = users
+                    self.tableViewUsers.reloadData()
+                }
         }
     }
 

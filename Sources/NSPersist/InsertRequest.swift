@@ -8,11 +8,21 @@
 
 import CoreData
 
+/**
+ Insert Request
+ 
+ Create and perform insert requests.
+ */
 @available(iOS 10, OSX 10.12, watchOS 3.0, *)
-public class InsertRequest<T> where T: NSManagedObject {
+public final class InsertRequest<T> where T: NSManagedObject {
     
     private init() { }
     
+    /**
+     Creates new Insert Request.
+     
+     - Parameter object: NSManagedObject Type
+     */
     class func shared(object: T.Type) -> InsertRequest<T> {
         return InsertRequest<T>()
     }
