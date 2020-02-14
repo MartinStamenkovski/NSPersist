@@ -27,6 +27,8 @@
 		324FE1F423F5EEB00022F788 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F323F5EEB00022F788 /* ViewController.swift */; };
 		324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */; };
 		324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F723F5EF120022F788 /* AppDelegate.swift */; };
+		325616CD23F719AE000E2010 /* NSPersist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; };
+		325616CE23F719AE000E2010 /* NSPersist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5B989C6823F68B4400CA6D52 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B989C6623F68B4400CA6D52 /* NSPersistTestModel.xcdatamodeld */; };
 		5B989C6B23F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B989C6923F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodeld */; };
 		5B989C6F23F68DDF00CA6D52 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B989C6E23F68DDF00CA6D52 /* users.json */; };
@@ -58,7 +60,28 @@
 			remoteGlobalIDString = "NSPersist::NSPersistTests";
 			remoteInfo = NSPersistTests;
 		};
+		325616CA23F71996000E2010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "NSPersist::NSPersist";
+			remoteInfo = NSPersist;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		325616CF23F719AE000E2010 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				325616CE23F719AE000E2010 /* NSPersist.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		324FE1C723F5EB700022F788 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325616CD23F719AE000E2010 /* NSPersist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +154,13 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		325616C723F71996000E2010 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_16 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +196,7 @@
 				324FE1C823F5EB710022F788 /* Example */,
 				OBJ_19 /* Products */,
 				OBJ_23 /* README.md */,
+				325616C723F71996000E2010 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,10 +233,12 @@
 				324FE1C323F5EB700022F788 /* Sources */,
 				324FE1C423F5EB700022F788 /* Frameworks */,
 				324FE1C523F5EB700022F788 /* Resources */,
+				325616CF23F719AE000E2010 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				325616CB23F71996000E2010 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -359,6 +393,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		325616CB23F71996000E2010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "NSPersist::NSPersist" /* NSPersist */;
+			targetProxy = 325616CA23F71996000E2010 /* PBXContainerItemProxy */;
+		};
 		OBJ_47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "NSPersist::NSPersistTests" /* NSPersistTests */;

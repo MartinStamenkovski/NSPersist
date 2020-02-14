@@ -31,31 +31,20 @@ class ViewController: UIViewController {
         }
     }
     
-    @available(iOS 13, *)
     @IBAction func refreshUsers(_ sender: Any) {
         
-        let context = NSPersist.shared.newBackgroundContext()
+        let user = NSExampleUser(context: .main)
+        user.name = "Test"
         
-        let dogs = ["Casper", "Doggy", "Max"].map { name -> NSExampleDog in
-            let dog = NSExampleDog(context: context)
+        ["Casper", "Doggy", "Max"].forEach { (name) in
+            let dog = NSExampleDog(context: .main)
             dog.name = name
-            return dog
+            user.addToNsexampledog(dog)
         }
+    
+        NSPersist.shared.saveContext()
         
-        let users = [
-            [
-                "name" : "Test",
-                "nsexampledog" : dogs
-            ],
-            [
-                "name" : "Another user",
-            ]
-        ]
-        
-        NSPersist.shared.insertBatchAsync(NSExampleUser.self, values: users, in: context) { didInsert in
-            self.loadUsers()
-        }
-        
+        self.loadUsers()
     }
     
     @IBAction func addUserAction(_ sender: Any) {

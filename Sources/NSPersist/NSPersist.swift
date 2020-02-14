@@ -41,7 +41,18 @@ public final class NSPersist: NSPersistentContainer {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        
+        container.viewContext.undoManager = undoManager
         return container
+    }()
+    
+    /**
+     Singleton instance of UndoManager
+     
+     You can use this to perform undo and redo operations.
+     */
+    public static let undoManager: UndoManager = {
+        return UndoManager()
     }()
     
     /**
