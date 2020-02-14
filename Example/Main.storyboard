@@ -19,15 +19,15 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userTableViewCell" textLabel="iqQ-lp-Pqm" style="IBUITableViewCellStyleDefault" id="sVi-v7-7bR">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userTableViewCell" textLabel="iqQ-lp-Pqm" rowHeight="62" style="IBUITableViewCellStyleDefault" id="sVi-v7-7bR">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sVi-v7-7bR" id="nD7-hT-FDt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iqQ-lp-Pqm">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="62"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -49,18 +49,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="7wx-I2-QuA">
-                        <leftBarButtonItems>
-                            <barButtonItem image="star.fill" catalog="system" id="XG6-T4-lKE">
-                                <connections>
-                                    <segue destination="BTS-Uv-Ei8" kind="show" id="Va4-9f-hMw"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="refresh" id="j3S-u4-F7H">
-                                <connections>
-                                    <action selector="refreshUsers:" destination="BYZ-38-t0r" id="ZjB-YN-Bk9"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="j3S-u4-F7H">
+                            <connections>
+                                <action selector="refreshUsers:" destination="BYZ-38-t0r" id="ZjB-YN-Bk9"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="toq-SU-aPe">
                                 <connections>
@@ -76,30 +69,31 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewUsers" destination="t2Q-Cc-SMf" id="DpQ-L1-h25"/>
+                        <segue destination="BTS-Uv-Ei8" kind="show" identifier="segueDogs" id="FrO-ja-c5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="102.45535714285714"/>
         </scene>
-        <!--Favorites-->
+        <!--Dogs-->
         <scene sceneID="uhi-Gi-Ve7">
             <objects>
-                <tableViewController id="BTS-Uv-Ei8" customClass="FavoritesTableViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BTS-Uv-Ei8" customClass="DogsTableViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dCG-Fv-sNS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritesCell" textLabel="pMv-Ve-ItV" style="IBUITableViewCellStyleDefault" id="j2y-vR-Nxo">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogTableViewCell" textLabel="pMv-Ve-ItV" rowHeight="59" style="IBUITableViewCellStyleDefault" id="j2y-vR-Nxo">
+                                <rect key="frame" x="0.0" y="28" width="414" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j2y-vR-Nxo" id="uFe-1R-kOz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pMv-Ve-ItV">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -114,17 +108,13 @@
                             <outlet property="delegate" destination="BTS-Uv-Ei8" id="FNj-qn-pzW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favorites" id="V9Y-n8-Xoe">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="star.slash" catalog="system" id="5NS-3p-E09">
-                            <connections>
-                                <action selector="removeFavoritesAction:" destination="BTS-Uv-Ei8" id="sM9-qp-KJd"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Dogs" id="V9Y-n8-Xoe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z5T-GU-L5b"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isx-WL-sVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1803" y="103"/>
+            <point key="canvasLocation" x="1802.8985507246377" y="102.45535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QOW-S0-eey">
@@ -145,8 +135,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
-        <image name="star.slash" catalog="system" width="64" height="58"/>
-    </resources>
 </document>

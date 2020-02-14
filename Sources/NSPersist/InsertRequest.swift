@@ -28,17 +28,15 @@ public final class InsertRequest<T> where T: NSManagedObject {
     }
     
     @available(iOS 13, OSX 10.15, watchOS 6.0, *)
-    public func insertBatchAsync(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
+    public func insertBatchAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
         let entity = String(describing: T.self)
         
-        let backgroundContext = NSPersist.shared.newBackgroundContext()
-        
-        backgroundContext.perform {
+        context.perform {
             do {
                 
                 let request = NSBatchInsertRequest(entityName: entity, objects: values)
                 request.resultType = .objectIDs
-                let insertResult = try backgroundContext.execute(request) as? NSBatchInsertResult
+                let insertResult = try context.execute(request) as? NSBatchInsertResult
                 
                 guard let objectIds = insertResult?.result as? [NSManagedObjectID] else {
                     DispatchQueue.main.async {
@@ -64,17 +62,16 @@ public final class InsertRequest<T> where T: NSManagedObject {
 @available(iOS 10, OSX 10.12, watchOS 3.0, *)
 extension InsertRequest {
     
-    public func insertAsync(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
-        let backgroundContext = NSPersist.shared.newBackgroundContext()
+    public func insertAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
         
-        backgroundContext.perform {
+        context.perform {
             for value in values  {
-                let object = T(context: backgroundContext)
+                let object = T(context: context)
                 for (key, value) in value {
                     object.setValue(value, forKey: key)
                 }
             }
-            NSPersist.shared.saveContext(backgroundContext: backgroundContext)
+            NSPersist.shared.saveContext(backgroundContext: context)
             DispatchQueue.main.async {
                 completion(true)
             }

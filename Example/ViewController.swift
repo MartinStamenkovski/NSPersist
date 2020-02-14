@@ -10,52 +10,69 @@ import UIKit
 import NSPersist
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var tableViewUsers: UITableView!
-
+    
     var users: [NSExampleUser] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableViewUsers.delegate = self
         self.tableViewUsers.dataSource = self
-
+        
         self.loadUsers()
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dogsVC = segue.destination as? DogsTableViewController {
+            dogsVC.userName = sender as? String
+        }
+    }
+    
     @available(iOS 13, *)
     @IBAction func refreshUsers(_ sender: Any) {
-
+        
+        let context = NSPersist.shared.newBackgroundContext()
+        
+        let dogs = ["Casper", "Doggy", "Max"].map { name -> NSExampleDog in
+            let dog = NSExampleDog(context: context)
+            dog.name = name
+            return dog
+        }
+        
         let users = [
             [
                 "name" : "Test",
+                "nsexampledog" : dogs
             ],
             [
                 "name" : "Another user",
             ]
         ]
-
-        NSPersist.shared.insertAsync(NSExampleUser.self, values: users) { didInsert in
+        
+        NSPersist.shared.insertBatchAsync(NSExampleUser.self, values: users, in: context) { didInsert in
             self.loadUsers()
         }
+        
     }
-
+    
     @IBAction func addUserAction(_ sender: Any) {
         self.alertAddUser()
     }
-
+    
     @IBAction func deleteAllAction(_ sender: Any) {
-        NSPersist.shared.request(NSExampleUser.self) { (request) in
-            request.predicate = NSPredicate(format: "name = %@", "s")
-        }.deleteAsync { (didDelete) in
-            if didDelete {
-                self.loadUsers()
-            }
+        NSPersist
+            .shared
+            .request(NSExampleUser.self)
+            .deleteAsync { (didDelete) in
+                if didDelete {
+                    self.loadUsers()
+                }
         }
     }
-
+    
     func loadUsers() {
         NSPersist
             .shared
@@ -68,49 +85,46 @@ class ViewController: UIViewController {
                 }
         }
     }
-
+    
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userTableViewCell", for: indexPath)
         cell.textLabel?.text = users[indexPath.row].name
         //cell.accessoryType = users[indexPath.row].favorite ? .checkmark : .none
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let user = users[indexPath.row]
-        user.name = "\(indexPath.row)"
-        user.save()
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "segueDogs", sender: users[indexPath.row].name)
     }
 }
 
 extension ViewController {
-
+    
     func alertAddUser() {
-
+        
         let alert = UIAlertController(title: "Add User", message: nil, preferredStyle: .alert)
-
+        
         alert.addTextField { (textField) in
-
+            
         }
         let addAction = UIAlertAction(title: "Add", style: .default) { (action) in
             let user = NSExampleUser(context: .main)
             user.name = alert.textFields?.first?.text
             user.save()
-
+            
             self.loadUsers()
         }
         alert.addAction(addAction)
-
+        
         self.present(alert, animated: true, completion: nil)
     }
-
+    
 }

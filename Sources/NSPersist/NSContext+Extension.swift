@@ -17,7 +17,7 @@ extension NSManagedObjectContext {
     }
     
     /// Creates and returns new background context.
-    class func newBackgroundContext() -> NSManagedObjectContext {
+    public class func newBackgroundContext() -> NSManagedObjectContext {
         return NSPersist.shared.newBackgroundContext()
     }
 }
