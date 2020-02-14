@@ -8,15 +8,26 @@
 
 import CoreData
 
+/**
+ NSPersistentContainer wrapper.
+ */
 @available(iOS 10, macOS 10.12, watchOS 3.0, *)
 public class NSPersist: NSPersistentContainer {
     
     private static var containerName: String!
     
-    public static func setup(withName name: String) {
+    /**
+     Setup Core Data Model name.
+     
+     This should be called once, in AppDelegate or SceneDelegate and the name will be used to initialize CoreData container.
+     
+     - Parameter name: Core Data Model name to be used.
+     */
+    public class func setup(withName name: String) {
         self.containerName = name
     }
     
+    /// Singleton shared instance of NSPersist.
     public static let shared: NSPersist = {
         
         let container = NSPersist(name: containerName)
@@ -33,7 +44,13 @@ public class NSPersist: NSPersistentContainer {
         return container
     }()
     
-    
+    /**
+     Save changes if any.
+     
+     Calling this method will save all performed changes in the current context.
+     
+     - Parameter backgroundContext: Specify which context to use to save changes, default is main context.
+     */
     public func saveContext(backgroundContext: NSManagedObjectContext? = nil) {
         let context = backgroundContext ?? viewContext
         guard context.hasChanges else { return }
@@ -62,7 +79,7 @@ extension NSPersist {
     
     @available(iOS 13, OSX 10.15, watchOS 6.0, *)
     public func insertBatchAsync<T>(_ object: T.Type, values: [[String: Any]], completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
-        InsertRequest.shared(object: object).insertBatch(values, completion: completion)
+        InsertRequest.shared(object: object).insertBatchAsync(values, completion: completion)
     }
     
     public func insertAsync<T>(_ object: T.Type, values: [[String: Any]], completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {

@@ -11,6 +11,11 @@ import CoreData
 @available(iOS 10, OSX 10.12, watchOS 3.0, *)
 extension FetchRequest {
     
+    /**
+     Delete request.
+     
+     Perform delete request on the main context.
+     */
     public func delete() {
         let mainContext = NSPersist.shared.viewContext
         do {
@@ -25,7 +30,20 @@ extension FetchRequest {
             #endif
         }
     }
-    
+    /**
+     Delete request asynchronously.
+        
+     Performs the delete request asynchronously, using the NSBatchDeleteRequest.
+        
+     - NSBatchDeleteRequest:
+        
+        A request to Core Data to do a batch delete of data in a persistent store without loading any data into memory.
+     
+     - Parameter completion:
+        The block to execute  after the request finishes.
+     
+        This block takes one parameter Bool, true if the reques is successful or false.
+     */
     public func deleteAsync(completion: @escaping ((Bool) -> Void)) {
         
         let fetchRequest = self.fetchRequest as! NSFetchRequest<NSFetchRequestResult>

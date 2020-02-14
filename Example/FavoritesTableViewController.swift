@@ -11,7 +11,7 @@ import NSPersist
 
 class FavoritesTableViewController: UITableViewController {
     
-    var users: [User] = []
+    var users: [NSExampleUser] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class FavoritesTableViewController: UITableViewController {
     func loadUsers() {
         NSPersist
             .shared
-            .request(User.self) { (request) in
+            .request(NSExampleUser.self) { (request) in
                 request.predicate = NSPredicate(format: "favorite == true")
         }.getAsync {[weak self] (users) in
             guard let self = self else { return }
@@ -48,7 +48,7 @@ class FavoritesTableViewController: UITableViewController {
     
     
     func updateAllUsers() {
-        NSPersist.shared.update(User.self) { (batch) in
+        NSPersist.shared.update(NSExampleUser.self) { (batch) in
             batch.predicate = NSPredicate(format: "favorite == true")
             batch.propertiesToUpdate = ["favorite" : false]
         }.updateBatchAsync { didUpdate in

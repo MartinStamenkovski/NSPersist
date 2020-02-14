@@ -18,7 +18,7 @@ public class InsertRequest<T> where T: NSManagedObject {
     }
     
     @available(iOS 13, OSX 10.15, watchOS 6.0, *)
-    public func insertBatch(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
+    public func insertBatchAsync(_ values: [[String: Any]], completion: @escaping ((Bool) -> Void)) {
         let entity = String(describing: T.self)
         
         let backgroundContext = NSPersist.shared.newBackgroundContext()

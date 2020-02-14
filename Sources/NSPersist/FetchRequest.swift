@@ -58,7 +58,7 @@ public final class FetchRequest<T> where T: NSManagedObject {
             try backgroundContext.execute(asyncRequest)
         } catch {
             #if DEBUG
-            print(error)
+            fatalError(error.localizedDescription)
             #endif
         }
     }

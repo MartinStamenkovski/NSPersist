@@ -23,15 +23,14 @@
 /* Begin PBXBuildFile section */
 		324FE1D323F5EB720022F788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1D223F5EB720022F788 /* Assets.xcassets */; };
 		324FE1E623F5EB950022F788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */; };
-		324FE1E723F5EB950022F788 /* CoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1DC23F5EB940022F788 /* CoreModel.xcdatamodeld */; };
 		324FE1E923F5EB950022F788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DF23F5EB950022F788 /* Main.storyboard */; };
 		324FE1EA23F5EB950022F788 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E023F5EB950022F788 /* FavoritesTableViewController.swift */; };
-		324FE1ED23F5EB950022F788 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E423F5EB950022F788 /* User+CoreDataProperties.swift */; };
-		324FE1EE23F5EB950022F788 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1E523F5EB950022F788 /* User+CoreDataClass.swift */; };
-		324FE1F223F5EC1A0022F788 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1EF23F5EC100022F788 /* TestModel.xcdatamodeld */; };
 		324FE1F423F5EEB00022F788 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F323F5EEB00022F788 /* ViewController.swift */; };
 		324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */; };
 		324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F723F5EF120022F788 /* AppDelegate.swift */; };
+		5B989C6823F68B4400CA6D52 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B989C6623F68B4400CA6D52 /* NSPersistTestModel.xcdatamodeld */; };
+		5B989C6B23F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B989C6923F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodeld */; };
+		5B989C6F23F68DDF00CA6D52 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B989C6E23F68DDF00CA6D52 /* users.json */; };
 		OBJ_29 /* FetchRequest+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* FetchRequest+Delete.swift */; };
 		OBJ_30 /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* FetchRequest.swift */; };
 		OBJ_31 /* InsertRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* InsertRequest.swift */; };
@@ -66,15 +65,14 @@
 		324FE1D223F5EB720022F788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		324FE1D723F5EB720022F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		324FE1DD23F5EB940022F788 /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
 		324FE1DF23F5EB950022F788 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		324FE1E023F5EB950022F788 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
-		324FE1E423F5EB950022F788 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		324FE1E523F5EB950022F788 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		324FE1F023F5EC100022F788 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
 		324FE1F323F5EEB00022F788 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		324FE1F723F5EF120022F788 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B989C6723F68B4400CA6D52 /* NSPersistTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSPersistTestModel.xcdatamodel; sourceTree = "<group>"; };
+		5B989C6A23F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSPersistExampleModel.xcdatamodel; sourceTree = "<group>"; };
+		5B989C6E23F68DDF00CA6D52 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		"NSPersist::NSPersist::Product" /* NSPersist.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSPersist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"NSPersist::NSPersistTests::Product" /* NSPersistTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NSPersistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* FetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequest.swift; sourceTree = "<group>"; };
@@ -118,27 +116,18 @@
 		324FE1C823F5EB710022F788 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				324FE1DC23F5EB940022F788 /* CoreModel.xcdatamodeld */,
+				5B989C6923F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodeld */,
 				324FE1E023F5EB950022F788 /* FavoritesTableViewController.swift */,
 				324FE1F323F5EEB00022F788 /* ViewController.swift */,
 				324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */,
 				324FE1DF23F5EB950022F788 /* Main.storyboard */,
-				324FE1E323F5EB950022F788 /* Models */,
 				324FE1D223F5EB720022F788 /* Assets.xcassets */,
 				324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */,
 				324FE1F723F5EF120022F788 /* AppDelegate.swift */,
 				324FE1D723F5EB720022F788 /* Info.plist */,
+				5B989C6E23F68DDF00CA6D52 /* users.json */,
 			);
 			path = Example;
-			sourceTree = "<group>";
-		};
-		324FE1E323F5EB950022F788 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				324FE1E423F5EB950022F788 /* User+CoreDataProperties.swift */,
-				324FE1E523F5EB950022F788 /* User+CoreDataClass.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		OBJ_16 /* Tests */ = {
@@ -190,8 +179,8 @@
 		OBJ_8 /* NSPersist */ = {
 			isa = PBXGroup;
 			children = (
-				324FE1EF23F5EC100022F788 /* TestModel.xcdatamodeld */,
 				OBJ_9 /* FetchRequest+Delete.swift */,
+				5B989C6623F68B4400CA6D52 /* NSPersistTestModel.xcdatamodeld */,
 				OBJ_10 /* FetchRequest.swift */,
 				OBJ_11 /* InsertRequest.swift */,
 				OBJ_15 /* UpdateRequest.swift */,
@@ -314,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B989C6F23F68DDF00CA6D52 /* users.json in Resources */,
 				324FE1E923F5EB950022F788 /* Main.storyboard in Resources */,
 				324FE1D323F5EB720022F788 /* Assets.xcassets in Resources */,
 				324FE1E623F5EB950022F788 /* LaunchScreen.storyboard in Resources */,
@@ -328,11 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				324FE1EA23F5EB950022F788 /* FavoritesTableViewController.swift in Sources */,
-				324FE1ED23F5EB950022F788 /* User+CoreDataProperties.swift in Sources */,
-				324FE1E723F5EB950022F788 /* CoreModel.xcdatamodeld in Sources */,
 				324FE1F423F5EEB00022F788 /* ViewController.swift in Sources */,
+				5B989C6B23F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodeld in Sources */,
 				324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */,
-				324FE1EE23F5EB950022F788 /* User+CoreDataClass.swift in Sources */,
 				324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,11 +332,11 @@
 				OBJ_29 /* FetchRequest+Delete.swift in Sources */,
 				OBJ_30 /* FetchRequest.swift in Sources */,
 				OBJ_31 /* InsertRequest.swift in Sources */,
+				5B989C6823F68B4400CA6D52 /* NSPersistTestModel.xcdatamodeld in Sources */,
 				OBJ_32 /* NSContext+Extension.swift in Sources */,
 				OBJ_33 /* NSManagedObject+Extension.swift in Sources */,
 				OBJ_34 /* NSPersist.swift in Sources */,
 				OBJ_35 /* UpdateRequest.swift in Sources */,
-				324FE1F223F5EC1A0022F788 /* TestModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,23 +742,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		324FE1DC23F5EB940022F788 /* CoreModel.xcdatamodeld */ = {
+		5B989C6623F68B4400CA6D52 /* NSPersistTestModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				324FE1DD23F5EB940022F788 /* CoreModel.xcdatamodel */,
+				5B989C6723F68B4400CA6D52 /* NSPersistTestModel.xcdatamodel */,
 			);
-			currentVersion = 324FE1DD23F5EB940022F788 /* CoreModel.xcdatamodel */;
-			path = CoreModel.xcdatamodeld;
+			currentVersion = 5B989C6723F68B4400CA6D52 /* NSPersistTestModel.xcdatamodel */;
+			path = NSPersistTestModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		324FE1EF23F5EC100022F788 /* TestModel.xcdatamodeld */ = {
+		5B989C6923F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				324FE1F023F5EC100022F788 /* TestModel.xcdatamodel */,
+				5B989C6A23F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodel */,
 			);
-			currentVersion = 324FE1F023F5EC100022F788 /* TestModel.xcdatamodel */;
-			path = TestModel.xcdatamodeld;
+			currentVersion = 5B989C6A23F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodel */;
+			path = NSPersistExampleModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

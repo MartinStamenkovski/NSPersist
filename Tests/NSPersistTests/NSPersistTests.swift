@@ -21,20 +21,20 @@ class NSPersistTests: XCTestCase {
     }
     
     func testPersistentContainerSetup() {
-        NSPersist.setup(withName: "TestModel")
+        NSPersist.setup(withName: "NSPersistTestModel")
         XCTAssertNotNil(NSPersist.shared)
     }
     
     func testAddUser() {
-        NSPersist.setup(withName: "TestModel")
-        let user = TestUser(context: NSPersist.shared.viewContext)
+        NSPersist.setup(withName: "NSPersistTestModel")
+        let user = NSTestUser(context: NSPersist.shared.viewContext)
         user.name = "Test Name"
         NSPersist.shared.saveContext()
         
         //let expectation = self.expectation(description: "load_users")
         let users = NSPersist
             .shared
-            .request(TestUser.self)
+            .request(NSTestUser.self)
             .get()
         
         XCTAssertTrue(users.count > 0)
@@ -43,7 +43,7 @@ class NSPersistTests: XCTestCase {
     }
     
     func testAsyncRequestNoRetainCycle() {
-        NSPersist.setup(withName: "TestModel")
+        NSPersist.setup(withName: "NSPersistTestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -51,7 +51,7 @@ class NSPersistTests: XCTestCase {
         let expectation = self.expectation(description: "async_request")
         _ = NSPersist
             .shared
-            .request(TestUser.self, completion: {[captureObject] (request) in
+            .request(NSTestUser.self, completion: {[captureObject] (request) in
                 request.predicate = NSPredicate(format: "name = %@", "Test Name")
                 _ = captureObject
             })
@@ -66,7 +66,7 @@ class NSPersistTests: XCTestCase {
     }
     
     func testFetchRequestNoRetainCycle() {
-        NSPersist.setup(withName: "TestModel")
+        NSPersist.setup(withName: "NSPersistTestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -75,7 +75,7 @@ class NSPersistTests: XCTestCase {
         
         _ = NSPersist
             .shared
-            .request(TestUser.self, completion: {[captureObject] (request) in
+            .request(NSTestUser.self, completion: {[captureObject] (request) in
                 request.predicate = NSPredicate(format: "name = %@", "Martin")
                 _ = captureObject
                 expectation.fulfill()
@@ -88,7 +88,7 @@ class NSPersistTests: XCTestCase {
     }
     
     func testDeleteAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "TestModel")
+        NSPersist.setup(withName: "NSPersistTestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -97,7 +97,7 @@ class NSPersistTests: XCTestCase {
         
         NSPersist
             .shared
-            .request(TestUser.self)
+            .request(NSTestUser.self)
             .deleteAsync {[captureObject] (didDelete) in
                 _ = captureObject
                 expectation.fulfill()
@@ -109,7 +109,7 @@ class NSPersistTests: XCTestCase {
     }
     
     func testUpdateBatchAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "TestModel")
+        NSPersist.setup(withName: "NSPersistTestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -118,7 +118,7 @@ class NSPersistTests: XCTestCase {
         
         NSPersist
             .shared
-            .update(TestUser.self) { (request) in
+            .update(NSTestUser.self) { (request) in
                 request.predicate = NSPredicate(format: "favorite == true")
                 request.propertiesToUpdate = ["favorite" : false]
         }.updateBatchAsync {[captureObject] _ in
@@ -133,7 +133,7 @@ class NSPersistTests: XCTestCase {
     
     @available(iOS 13, *)
     func testBatchInsertAsyncNoRetainCycle() {
-        NSPersist.setup(withName: "TestModel")
+        NSPersist.setup(withName: "NSPersistTestModel")
 
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -153,7 +153,7 @@ class NSPersistTests: XCTestCase {
         
         NSPersist
             .shared
-            .insertBatchAsync(TestUser.self, values: users) { [captureObject] _ in
+            .insertBatchAsync(NSTestUser.self, values: users) { [captureObject] _ in
                 _ = captureObject
                 expectation.fulfill()
         }
