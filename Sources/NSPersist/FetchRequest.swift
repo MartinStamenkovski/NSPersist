@@ -12,7 +12,7 @@ import CoreData
  
  Create and perform fetch requests.
  */
-@available(iOS 10, OSX 10.12, watchOS 3.0, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
 public final class FetchRequest<T> where T: NSManagedObject {
     
     var fetchRequest: NSFetchRequest<T>!

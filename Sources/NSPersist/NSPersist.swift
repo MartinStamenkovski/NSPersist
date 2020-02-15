@@ -11,7 +11,7 @@ import CoreData
 /**
  NSPersistentContainer wrapper.
  */
-@available(iOS 10, macOS 10.12, watchOS 3.0, *)
+@available(iOS 10, macOS 10.12, watchOS 3.0, tvOS 10, *)
 public final class NSPersist: NSPersistentContainer {
     
     private static var containerName: String!
@@ -77,7 +77,7 @@ public final class NSPersist: NSPersistentContainer {
 }
 
 //MARK: - Request
-@available(iOS 10, OSX 10.12, watchOS 3.0, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
 extension NSPersist {
     
     public func request<T>(_ object: T.Type, completion: ((NSFetchRequest<T>) -> Void)? = nil) -> FetchRequest<T> where T: NSManagedObject {
@@ -88,7 +88,7 @@ extension NSPersist {
         return UpdateRequest.shared(object: object).batchRequest(completion)
     }
     
-    @available(iOS 13, OSX 10.15, watchOS 6.0, *)
+    @available(iOS 13, OSX 10.15, watchOS 6.0, tvOS 13, *)
     public func insertBatchAsync<T>(_ object: T.Type, values: [[String: Any]], in context: NSManagedObjectContext = .newBackgroundContext(), completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
         InsertRequest.shared(object: object).insertBatchAsync(values, context: context, completion: completion)
     }

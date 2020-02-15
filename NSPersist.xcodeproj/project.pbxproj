@@ -96,7 +96,7 @@
 		5B989C6A23F68BCA00CA6D52 /* NSPersistExampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSPersistExampleModel.xcdatamodel; sourceTree = "<group>"; };
 		5B989C6E23F68DDF00CA6D52 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		5B989C7023F6D2B600CA6D52 /* DogsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsTableViewController.swift; sourceTree = "<group>"; };
-		"NSPersist::NSPersist::Product" /* NSPersist.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NSPersist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"NSPersist::NSPersist::Product" /* NSPersist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NSPersist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"NSPersist::NSPersistTests::Product" /* NSPersistTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NSPersistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* FetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequest.swift; sourceTree = "<group>"; };
 		OBJ_11 /* InsertRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertRequest.swift; sourceTree = "<group>"; };
@@ -557,7 +557,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NSPersist;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
@@ -585,7 +585,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NSPersist;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;

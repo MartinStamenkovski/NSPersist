@@ -108,8 +108,8 @@ extension ViewController {
             let user = NSExampleUser(context: .main)
             user.name = alert.textFields?.first?.text
             user.save()
-            
-            self.loadUsers()
+            self.users.append(user)
+            self.tableViewUsers.reloadData()
         }
         alert.addAction(addAction)
         
