@@ -47,7 +47,7 @@ extension FetchRequest {
      */
     public func deleteAsync(completion: @escaping ((Bool) -> Void)) {
         
-        let fetchRequest = self.fetchRequest as! NSFetchRequest<NSFetchRequestResult>
+        guard let fetchRequest = self.fetchRequest as? NSFetchRequest<NSFetchRequestResult> else { return }
         
         let batchDelete = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         batchDelete.resultType = .resultTypeObjectIDs
