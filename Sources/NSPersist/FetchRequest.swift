@@ -57,7 +57,7 @@ public final class FetchRequest<T> where T: NSManagedObject {
     /**
     Perform fetch request asynchronously.
     
-     - Parameter completion:
+    - Parameter completion:
         The block to execute when the request finishes.
      
         The block takes one parameter, array of objects that match with the provided object and specified criteria, or nil if error occurred.

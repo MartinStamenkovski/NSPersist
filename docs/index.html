@@ -87,13 +87,16 @@
 
 <p>Check out the <a href="https://martinstamenkovski.github.io/NSPersist/">Documentation</a> for more information.</p>
 
+<p>First call <code>NSPersist.setup(withName: &quot;name&quot;)</code> to provide the name of the data model to be used.<br>
+This typically is called in <code>AppDelegate didFinishLaunchingWithOptions</code> once.</p>
+
 <p><strong>Example add record</strong>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">NSTestUser</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span>
 <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Test Name"</span>
 <span class="n">user</span><span class="o">.</span><span class="nf">save</span><span class="p">()</span>
 </code></pre>
 
-<p>As you can see the main context is accessible via <code>.main</code> property, and <code>user.save()</code> inserts in the main context by default,  or you can specify another context in it&rsquo;s parameter like this <code>user.save(context: backgroundContext)</code>.  </p>
+<p>As you can see the main context is accessible via <code>.main</code> property, and <code>user.save()</code> inserts in the main context by default,  or you can specify another context in its parameter like this <code>user.save(context: backgroundContext)</code>.  </p>
 
 <p><strong>Example usage of get request or <code>fetch</code></strong></p>
 <pre class="highlight swift"><code><span class="kt">NSPersist</span><span class="o">.</span><span class="n">shared</span>

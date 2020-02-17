@@ -45,9 +45,9 @@ public final class UpdateRequest<T> where T: NSManagedObject {
      A request to Core Data to do a batch update of data in a persistent store without loading any data into memory.
      
      - Parameter completion:
-     The block to execute  after the request finishes.
+        The block to execute  after the request finishes.
      
-     This block takes one parameter Bool, true if the request is successful or false.
+        This block takes one parameter Bool, true if the request is successful or false.
      */
     public func updateBatchAsync(_ completion: @escaping((Bool) -> Void)) {
         let backgroundContext = NSPersist.shared.newBackgroundContext()

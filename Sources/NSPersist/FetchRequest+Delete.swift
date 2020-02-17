@@ -9,14 +9,14 @@
 import CoreData
 
 @available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
-extension FetchRequest {
+public extension FetchRequest {
     
     /**
      Delete request.
      
      Perform delete request on the main context.
      */
-    public func delete() {
+    func delete() {
         let mainContext = NSPersist.shared.viewContext
         do {
             let results = try mainContext.fetch(fetchRequest)
@@ -45,7 +45,7 @@ extension FetchRequest {
      
         This block takes one parameter Bool, true if the request is successful or false.
      */
-    public func deleteAsync(completion: @escaping ((Bool) -> Void)) {
+    func deleteAsync(completion: @escaping ((Bool) -> Void)) {
         
         guard let fetchRequest = self.fetchRequest as? NSFetchRequest<NSFetchRequestResult> else { return }
         
