@@ -25,9 +25,9 @@ class NSPersistTests: XCTestCase {
     }
     
     func testAddUser() {
-        let user = NSTestUser(context: NSPersist.shared.viewContext)
+        let user = NSTestUser(context: .main)
         user.name = "Test Name"
-        NSPersist.shared.saveContext()
+        user.save()
         
         //let expectation = self.expectation(description: "load_users")
         let users = NSPersist

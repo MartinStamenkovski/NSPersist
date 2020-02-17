@@ -29,6 +29,7 @@ class DogsTableViewController: UIViewController {
     func loadDogs() {
         self.dogs = NSPersist.shared.request(NSExampleDogF.self) { (request) in
             request.predicate = NSPredicate(format: "nsexampleuser.name = %@", self.userName)
+            request.sortDescriptors = [.init(key: "name", ascending: false)]
         }.get()
         
         self.tableView.reloadData()
