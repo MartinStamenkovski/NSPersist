@@ -33,5 +33,5 @@ let package = Package(
             dependencies: ["NSPersist"],
             path: "Tests"),
     ],
-    swiftLanguageVersions: [.v5]
+    swiftLanguageVersions: [.v4, .v4_2, .v5]
 )

@@ -43,6 +43,7 @@ public final class FetchRequest<T> where T: NSManagedObject {
      */
     public func get() -> [T] {
         let mainContext = NSPersist.shared.viewContext
+        
         do {
             return try mainContext.fetch(fetchRequest)
         } catch {
