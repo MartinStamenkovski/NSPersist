@@ -1,0 +1,75 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/Sources/NSPersist/InsertRequest.swift",
+      "line": 31,
+      "symbol": "InsertRequest.insertBatchAsync(_:context:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/Sources/NSPersist/InsertRequest.swift",
+      "line": 64,
+      "symbol": "InsertRequest.insertAsync(_:context:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/Sources/NSPersist/NSPersist.swift",
+      "line": 85,
+      "symbol": "NSPersist.request(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/Sources/NSPersist/NSPersist.swift",
+      "line": 89,
+      "symbol": "NSPersist.update(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/Sources/NSPersist/NSPersist.swift",
+      "line": 94,
+      "symbol": "NSPersist.insertBatchAsync(_:values:in:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/Sources/NSPersist/NSPersist.swift",
+      "line": 98,
+      "symbol": "NSPersist.insertAsync(_:values:in:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataClass.swift",
+      "line": 14,
+      "symbol": "NSTestUser",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataClass.swift",
+      "line": 14,
+      "symbol": "NSTestUser",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataProperties.swift",
+      "line": 16,
+      "symbol": "NSTestUser.fetchRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataProperties.swift",
+      "line": 20,
+      "symbol": "NSTestUser.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/martin/Documents/libs/NSPersist"
+}
