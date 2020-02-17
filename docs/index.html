@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (66% documented)</p>
+        <p><a href="index.html"> Docs</a> (76% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -66,6 +66,46 @@
             <h1 id='nspersist' class='heading'>NSPersist</h1>
 
 <p>A simple lightweight Core Data wrapper in Swift.</p>
+
+<p>I created this wrapper mostly to ease my workflow in the projects, if you find it useful feel free to use it and modify it to your needs.</p>
+<h3 id='currently-nspersist-supports' class='heading'>Currently NSPersist supports:</h3>
+
+<ul>
+<li>[x] Delete.</li>
+<li>[x] DeleteBatchAsync</li>
+<li>[x] UpdateBatchAsync</li>
+<li>[x] InsertBatchAsync</li>
+<li>[x] getAsync (<em>fetch async</em>)</li>
+<li>[x] get (<em>fetch</em>)</li>
+<li>[x] UndoManager (iOS), macOS has one by default.</li>
+<li>[x] Lightweight migrations.</li>
+<li>[x] Tests</li>
+<li>[ ] CloudKit</li>
+<li>[ ] Hard migrations</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Check out the <a href="https://martinstamenkovski.github.io/NSPersist/">Documentation</a> for more information.</p>
+
+<p><strong>Example add record</strong>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">NSTestUser</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span>
+<span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Test Name"</span>
+<span class="n">user</span><span class="o">.</span><span class="nf">save</span><span class="p">()</span>
+</code></pre>
+
+<p>As you can see the main context is accessible via <code>.main</code> property, and <code>user.save()</code> inserts in the main context by default,  or you can specify another context in it&rsquo;s parameter like this <code>user.save(context: backgroundContext)</code>.  </p>
+
+<p><strong>Example usage of get request or <code>fetch</code></strong></p>
+<pre class="highlight swift"><code><span class="kt">NSPersist</span><span class="o">.</span><span class="n">shared</span>
+<span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">NSExampleDogF</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="k">in</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">predicate</span> <span class="o">=</span> <span class="kt">NSPredicate</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="s">"nsexampleuser.name = %@"</span><span class="p">,</span> <span class="s">"Test"</span><span class="p">)</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">sortDescriptors</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"name"</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kc">false</span><span class="p">)]</span>
+<span class="p">}</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span>
+</code></pre>
+
+<p>returns list of dogs where user name is <em>Test</em>.</p>
+
+<p><em>As I said this is a lightweight wrapper, you are still working with the <code>NSFetchRequest</code> that you get from the completion block.</em></p>
 
           </section>
         </section>
