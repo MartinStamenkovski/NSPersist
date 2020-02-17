@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rsa-je-KBT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -69,7 +70,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewUsers" destination="t2Q-Cc-SMf" id="DpQ-L1-h25"/>
-                        <segue destination="BTS-Uv-Ei8" kind="show" identifier="segueDogs" id="FrO-ja-c5f"/>
+                        <segue destination="nxh-E9-HcE" kind="show" identifier="segueDogs" id="YKP-X7-ypq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,44 +78,77 @@
             <point key="canvasLocation" x="1047.8260869565217" y="102.45535714285714"/>
         </scene>
         <!--Dogs-->
-        <scene sceneID="uhi-Gi-Ve7">
+        <scene sceneID="kAR-6F-4JO">
             <objects>
-                <tableViewController id="BTS-Uv-Ei8" customClass="DogsTableViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dCG-Fv-sNS">
+                <viewController id="nxh-E9-HcE" customClass="DogsTableViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bFR-Bg-0cc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dogTableViewCell" textLabel="pMv-Ve-ItV" rowHeight="59" style="IBUITableViewCellStyleDefault" id="j2y-vR-Nxo">
-                                <rect key="frame" x="0.0" y="28" width="414" height="59"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j2y-vR-Nxo" id="uFe-1R-kOz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pMv-Ve-ItV">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="59"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p3z-G1-IPB">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dogTableViewCell" textLabel="Z4s-iG-qXf" rowHeight="64" style="IBUITableViewCellStyleDefault" id="0w9-FI-MGY">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0w9-FI-MGY" id="fsi-40-9Lz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="BTS-Uv-Ei8" id="1p4-cx-cH1"/>
-                            <outlet property="delegate" destination="BTS-Uv-Ei8" id="FNj-qn-pzW"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Dogs" id="V9Y-n8-Xoe">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z5T-GU-L5b"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Isx-WL-sVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z4s-iG-qXf">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4k-x8-w3J">
+                                <rect key="frame" x="12" y="1002" width="390" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zam-i0-9pF">
+                                        <rect key="frame" x="341" y="8" width="37" height="44"/>
+                                        <state key="normal" title="Undo"/>
+                                        <connections>
+                                            <action selector="undoAction:" destination="nxh-E9-HcE" eventType="touchUpInside" id="d0y-iY-AGS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zam-i0-9pF" secondAttribute="bottom" constant="8" id="6Y7-A4-PyC"/>
+                                    <constraint firstAttribute="trailing" secondItem="zam-i0-9pF" secondAttribute="trailing" constant="12" id="AqL-5t-oDa"/>
+                                    <constraint firstAttribute="height" constant="60" id="EAt-NM-KbK"/>
+                                    <constraint firstItem="zam-i0-9pF" firstAttribute="top" secondItem="d4k-x8-w3J" secondAttribute="top" constant="8" id="xZE-ka-fTe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d4k-x8-w3J" firstAttribute="leading" secondItem="OWE-UD-BU7" secondAttribute="leading" constant="12" id="7ua-bF-rXF"/>
+                            <constraint firstItem="OWE-UD-BU7" firstAttribute="trailing" secondItem="p3z-G1-IPB" secondAttribute="trailing" id="C7d-6V-SQ2"/>
+                            <constraint firstItem="OWE-UD-BU7" firstAttribute="bottom" secondItem="p3z-G1-IPB" secondAttribute="bottom" id="D7n-TJ-XAB"/>
+                            <constraint firstItem="OWE-UD-BU7" firstAttribute="bottom" secondItem="d4k-x8-w3J" secondAttribute="bottom" constant="-200" id="XDQ-yV-GdF"/>
+                            <constraint firstItem="p3z-G1-IPB" firstAttribute="top" secondItem="OWE-UD-BU7" secondAttribute="top" id="d4R-Rj-EH9"/>
+                            <constraint firstItem="p3z-G1-IPB" firstAttribute="leading" secondItem="OWE-UD-BU7" secondAttribute="leading" id="qIl-Kn-uVe"/>
+                            <constraint firstItem="OWE-UD-BU7" firstAttribute="trailing" secondItem="d4k-x8-w3J" secondAttribute="trailing" constant="12" id="ycM-7y-y4N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OWE-UD-BU7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dogs" id="DCL-gG-eZK"/>
+                    <connections>
+                        <outlet property="constraintUndoBottom" destination="XDQ-yV-GdF" id="6aJ-O7-ENq"/>
+                        <outlet property="tableView" destination="p3z-G1-IPB" id="eDm-Vh-clz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82s-gC-ddh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.8985507246377" y="102.45535714285714"/>
+            <point key="canvasLocation" x="1857.9710144927537" y="101.78571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QOW-S0-eey">

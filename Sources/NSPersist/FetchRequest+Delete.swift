@@ -8,7 +8,7 @@
 
 import CoreData
 
-@available(iOS 10, OSX 10.12, watchOS 3.0, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
 extension FetchRequest {
     
     /**
@@ -47,7 +47,7 @@ extension FetchRequest {
      */
     public func deleteAsync(completion: @escaping ((Bool) -> Void)) {
         
-        let fetchRequest = self.fetchRequest as! NSFetchRequest<NSFetchRequestResult>
+        guard let fetchRequest = self.fetchRequest as? NSFetchRequest<NSFetchRequestResult> else { return }
         
         let batchDelete = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         batchDelete.resultType = .resultTypeObjectIDs

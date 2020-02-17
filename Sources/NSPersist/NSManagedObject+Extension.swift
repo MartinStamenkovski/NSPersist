@@ -8,7 +8,7 @@
 
 import CoreData
 
-@available(iOS 10, OSX 10.12, watchOS 3.0, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
 extension NSManagedObject {
     
     /**

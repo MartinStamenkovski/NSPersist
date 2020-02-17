@@ -27,7 +27,7 @@ public final class InsertRequest<T> where T: NSManagedObject {
         return InsertRequest<T>()
     }
     
-    @available(iOS 13, OSX 10.15, watchOS 6.0, *)
+    @available(iOS 13, OSX 10.15, watchOS 6.0, tvOS 13, *)
     public func insertBatchAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
         let entity = String(describing: T.self)
         
@@ -59,7 +59,7 @@ public final class InsertRequest<T> where T: NSManagedObject {
     }
 }
 
-@available(iOS 10, OSX 10.12, watchOS 3.0, *)
+@available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
 extension InsertRequest {
     public func insertAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
         
