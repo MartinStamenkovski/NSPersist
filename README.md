@@ -14,8 +14,8 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 - [x] UndoManager (iOS), macOS has one by default.
 - [x] Lightweight migrations.
 - [x] Tests
-- [ ] CloudKit
-- [ ] Hard migrations
+- [ ] CloudKit Synchronization
+
 
 ## Usage
 

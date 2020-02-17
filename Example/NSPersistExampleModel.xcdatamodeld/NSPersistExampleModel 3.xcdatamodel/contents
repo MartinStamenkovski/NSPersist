@@ -9,7 +9,10 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="nsexampledog" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NSExampleDogF" inverseName="nsexampleuser" inverseEntity="NSExampleDogF"/>
     </entity>
-    <configuration name="TestConfig"/>
+    <configuration name="TestConfig">
+        <memberEntity name="NSExampleUser"/>
+        <memberEntity name="NSExampleDogF"/>
+    </configuration>
     <elements>
         <element name="NSExampleDogF" positionX="-250.0625" positionY="-23.46875" width="128" height="88"/>
         <element name="NSExampleUser" positionX="-54" positionY="-9" width="128" height="73"/>

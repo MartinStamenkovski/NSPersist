@@ -16,6 +16,13 @@ public final class NSPersist: NSPersistentContainer {
     
     private static var containerName: String!
     
+    private static var storeURL = FileManager.default.urls(for: .applicationDirectory, in: .userDomainMask).last
+    private static var configurations: [String]!
+    
+    private override init(name: String, managedObjectModel model: NSManagedObjectModel) {
+        super.init(name: name, managedObjectModel: model)
+    }
+    
     /**
      Setup Core Data Model name.
      
@@ -23,14 +30,17 @@ public final class NSPersist: NSPersistentContainer {
      
      - Parameter name: Core Data Model name to be used.
      */
-    public class func setup(withName name: String) {
+    public class func setup(withName name: String, configurations: [String] = []) {
         self.containerName = name
+        self.configurations = configurations
     }
     
     /// Singleton shared instance of NSPersist.
     public static let shared: NSPersist = {
         
         let container = NSPersist(name: containerName)
+        
+        addConfigurations(in: container)
         
         container.loadPersistentStores(completionHandler: { (description, error) in
             if let error = error {
@@ -39,15 +49,33 @@ public final class NSPersist: NSPersistentContainer {
                 #endif
             }
         })
-        
+        container.persistentStoreCoordinator.persistentStores.forEach { (store) in
+            print(store.configurationName)
+        }
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        
         container.viewContext.undoManager = undoManager
-    
+        
         return container
     }()
     
+    private static func addConfigurations(in container: NSPersist) {
+        
+        if let storeURL = storeURL {
+            configurations.forEach { (name) in
+                let url = storeURL.appendingPathComponent("\(name.lowercased()).sqlite")
+                let storeDescription = NSPersistentStoreDescription(url: url)
+                storeDescription.configuration = name
+                container.persistentStoreCoordinator.addPersistentStore(with: storeDescription) { ( _ , error) in
+                    if let error = error {
+                        #if DEBUG
+                        print(error)
+                        #endif
+                    }
+                }
+            }
+        }
+    }
     /**
      Singleton instance of UndoManager
      
@@ -65,6 +93,7 @@ public final class NSPersist: NSPersistentContainer {
      - Parameter backgroundContext: Specify which context to use to save changes, default is main context.
      */
     public func saveContext(backgroundContext: NSManagedObjectContext? = nil) {
+        
         let context = backgroundContext ?? viewContext
         guard context.hasChanges else { return }
         do {
