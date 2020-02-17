@@ -15,7 +15,7 @@ class DogsTableViewController: UIViewController {
     @IBOutlet weak var constraintUndoBottom: NSLayoutConstraint!
     var userName: String!
     
-    var dogs: [NSExampleDog] = []
+    var dogs: [NSExampleDogF] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class DogsTableViewController: UIViewController {
     }
     
     func loadDogs() {
-        self.dogs = NSPersist.shared.request(NSExampleDog.self) { (request) in
+        self.dogs = NSPersist.shared.request(NSExampleDogF.self) { (request) in
             request.predicate = NSPredicate(format: "nsexampleuser.name = %@", self.userName)
         }.get()
         
@@ -61,10 +61,15 @@ extension DogsTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogTableViewCell", for: indexPath)
         cell.textLabel?.text = dogs[indexPath.row].name
+        cell.accessoryType = dogs[indexPath.row].favorite ? .checkmark : .none
         return cell
     }
-    
-    
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dog =  dogs[indexPath.row]
+        dog.favorite = !dog.favorite
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }

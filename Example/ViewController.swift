@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         user.name = "Test"
         
         ["Casper", "Doggy", "Max"].forEach { (name) in
-            let dog = NSExampleDog(context: .main)
+            let dog = NSExampleDogF(context: .main)
             dog.name = name
             user.addToNsexampledog(dog)
         }

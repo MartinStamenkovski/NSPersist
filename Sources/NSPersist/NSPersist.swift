@@ -39,10 +39,12 @@ public final class NSPersist: NSPersistentContainer {
                 #endif
             }
         })
+        
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         
         container.viewContext.undoManager = undoManager
+    
         return container
     }()
     
