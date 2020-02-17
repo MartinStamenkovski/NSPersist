@@ -19,7 +19,7 @@ public final class NSPersist: NSPersistentContainer {
     /**
      Setup Core Data Model name.
      
-     This should be called once, in AppDelegate or SceneDelegate and the name will be used to initialize CoreData container.
+     This should be called once, in AppDelegate  and the name will be used to initialize Core Data container.
      
      - Parameter name: Core Data Model name to be used.
      */
@@ -92,10 +92,10 @@ extension NSPersist {
     
     @available(iOS 13, OSX 10.15, watchOS 6.0, tvOS 13, *)
     public func insertBatchAsync<T>(_ object: T.Type, values: [[String: Any]], in context: NSManagedObjectContext = .newBackgroundContext(), completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
-        InsertRequest.shared(object: object).insertBatchAsync(values, context: context, completion: completion)
+        return InsertRequest.shared(object: object).insertBatchAsync(values, context: context, completion: completion)
     }
     
     public func insertAsync<T>(_ object: T.Type, values: [[String: Any]], in context: NSManagedObjectContext = .newBackgroundContext(), completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
-        InsertRequest.shared(object: object).insertAsync(values, context: context, completion: completion)
+        return InsertRequest.shared(object: object).insertAsync(values, context: context, completion: completion)
     }
 }
