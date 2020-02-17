@@ -61,7 +61,6 @@ public final class InsertRequest<T> where T: NSManagedObject {
 
 @available(iOS 10, OSX 10.12, watchOS 3.0, *)
 extension InsertRequest {
-    
     public func insertAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
         
         context.perform {
