@@ -21,7 +21,16 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 
 Check out the [Documentation](https://martinstamenkovski.github.io/NSPersist/) for more information.
 
-Example usage of get request or `fetch`
+**Example add record**:
+
+```swift
+let user = NSTestUser(context: .main)
+user.name = "Test Name"
+user.save()
+```
+As you can see the main context is accessible via `.main` property, and `user.save()` inserts in the main context by default,  or you can specify another context in it's parameter like this `user.save(context: backgroundContext)`.  
+
+**Example usage of get request or `fetch`**
 ```swift
 NSPersist.shared
 .request(NSExampleDogF.self) { (request) in
@@ -31,4 +40,4 @@ NSPersist.shared
 ```
 returns list of dogs where user name is *Test*.
 
-As I said this is a lightweight wrapper, you are still working with the `NSFetchRequest` that you get from the completion block.
+*As I said this is a lightweight wrapper, you are still working with the `NSFetchRequest` that you get from the completion block.*
