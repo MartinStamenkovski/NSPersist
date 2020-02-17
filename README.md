@@ -21,6 +21,9 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 
 Check out the [Documentation](https://martinstamenkovski.github.io/NSPersist/) for more information.
 
+First call `NSPersist.setup(withName: "name")` to provide the name of the data model to be used.  
+This typically is called in `AppDelegate didFinishLaunchingWithOptions` once.
+
 **Example add record**:
 
 ```swift
@@ -28,7 +31,7 @@ let user = NSTestUser(context: .main)
 user.name = "Test Name"
 user.save()
 ```
-As you can see the main context is accessible via `.main` property, and `user.save()` inserts in the main context by default,  or you can specify another context in it's parameter like this `user.save(context: backgroundContext)`.  
+As you can see the main context is accessible via `.main` property, and `user.save()` inserts in the main context by default,  or you can specify another context in its parameter like this `user.save(context: backgroundContext)`.  
 
 **Example usage of get request or `fetch`**
 ```swift
