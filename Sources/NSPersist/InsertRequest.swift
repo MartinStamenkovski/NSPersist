@@ -59,21 +59,3 @@ public final class InsertRequest<T> where T: NSManagedObject {
     }
 }
 
-@available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
-extension InsertRequest {
-    public func insertAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
-        
-        context.perform {
-            for value in values  {
-                let object = T(context: context)
-                for (key, value) in value {
-                    object.setValue(value, forKey: key)
-                }
-            }
-            NSPersist.shared.saveContext(backgroundContext: context)
-            DispatchQueue.main.async {
-                completion(true)
-            }
-        }
-    }
-}

@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        NSPersist.setup(withName: "NSPersistExampleModel", configurations: ["TestConfig"])
+        NSPersist.setup(withName: "NSExampleNoteModel")
         return true
     }
 
