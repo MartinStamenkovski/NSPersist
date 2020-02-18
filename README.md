@@ -14,6 +14,7 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 - [x] UndoManager (iOS), macOS has one by default.
 - [x] Lightweight migrations.
 - [x] Tests
+- [x] Multiple store configurations
 - [ ] CloudKit Synchronization
 
 
@@ -21,7 +22,7 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 
 Check out the [Documentation](https://martinstamenkovski.github.io/NSPersist/) for more information.
 
-First call `NSPersist.setup(withName: "name")` to provide the name of the data model to be used.  
+First call `NSPersist.setup(withName: "name")` or `NSPersist.setup(withName: <#name#>, configurations: ["name"])` to provide the name of the data model to be used and additional configurations.  
 This typically is called in `AppDelegate didFinishLaunchingWithOptions` once.
 
 **Example add record**:
