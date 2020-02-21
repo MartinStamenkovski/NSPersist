@@ -37,7 +37,7 @@ class NSPersistTests: XCTestCase {
         
         XCTAssertTrue(users.count > 0)
         XCTAssertNotNil(users.last)
-        XCTAssertTrue(users.last?.name == "Test Name")
+        XCTAssertTrue(users.last?.name == "Test")
     }
     
     func testAsyncRequestNoRetainCycle() {
