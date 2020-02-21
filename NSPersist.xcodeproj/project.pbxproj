@@ -30,6 +30,7 @@
 		325616CE23F719AE000E2010 /* NSPersist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		325B2C8924004F7A00E16804 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */; };
 		325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8A2400578900E16804 /* NoteTableViewCell.swift */; };
+		325B2CF7240083E500E16804 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B4A790323FAA9D200037C8F /* NSPersistTestModel.xcdatamodeld */; };
 		5B4A790523FAA9D200037C8F /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B4A790323FAA9D200037C8F /* NSPersistTestModel.xcdatamodeld */; };
 		5BA2C9F223FBD95E008EDD21 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */; };
 		5BA2C9F423FBDB76008EDD21 /* AddEditNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */; };
@@ -68,6 +69,13 @@
 			remoteGlobalIDString = "NSPersist::NSPersist";
 			remoteInfo = NSPersist;
 		};
+		325B2CEB24007DFD00E16804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 324FE1C623F5EB700022F788;
+			remoteInfo = Example;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,7 +107,7 @@
 		5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditNoteTableViewController.swift; sourceTree = "<group>"; };
 		5BA2C9F623FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSExampleNoteModel.xcdatamodel; sourceTree = "<group>"; };
 		"NSPersist::NSPersist::Product" /* NSPersist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NSPersist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"NSPersist::NSPersistTests::Product" /* NSPersistTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NSPersistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"NSPersist::NSPersistTests::Product" /* NSPersistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NSPersistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* FetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequest.swift; sourceTree = "<group>"; };
 		OBJ_11 /* InsertRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertRequest.swift; sourceTree = "<group>"; };
 		OBJ_12 /* NSContext+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSContext+Extension.swift"; sourceTree = "<group>"; };
@@ -275,6 +283,7 @@
 			);
 			dependencies = (
 				OBJ_56 /* PBXTargetDependency */,
+				325B2CEC24007DFD00E16804 /* PBXTargetDependency */,
 			);
 			name = NSPersistTests;
 			productName = NSPersistTests;
@@ -397,6 +406,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_53 /* NSPersistTests.swift in Sources */,
+				325B2CF7240083E500E16804 /* NSPersistTestModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +417,11 @@
 			isa = PBXTargetDependency;
 			target = "NSPersist::NSPersist" /* NSPersist */;
 			targetProxy = 325616CA23F71996000E2010 /* PBXContainerItemProxy */;
+		};
+		325B2CEC24007DFD00E16804 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 324FE1C623F5EB700022F788 /* Example */;
+			targetProxy = 325B2CEB24007DFD00E16804 /* PBXContainerItemProxy */;
 		};
 		OBJ_47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

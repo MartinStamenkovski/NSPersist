@@ -24,26 +24,13 @@ class NSPersistTests: XCTestCase {
         XCTAssertNotNil(NSPersist.shared)
     }
     
-    func testAddUser() {
-        let user = NSTestUser(context: .main)
-        user.name = "Test Name"
-        user.save()
-        
-        //let expectation = self.expectation(description: "load_users")
-        let users = NSPersist
-            .shared
-            .request(NSTestUser.self)
-            .get()
-        
-        XCTAssertTrue(users.count > 0)
-        XCTAssertNotNil(users.last)
-        XCTAssertTrue(users.last?.name == "Test")
-    }
     
-    func testAsyncRequestNoRetainCycle() {
+    
+   func testAsyncRequestNoRetainCycle() {
         
         var captureObject = NSObject()
         weak var weakObject = captureObject
+        
         
         let expectation = self.expectation(description: "async_request")
         _ = NSPersist
