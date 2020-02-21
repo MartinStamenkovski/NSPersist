@@ -1,5 +1,8 @@
 # NSPersist
 
+<p align="center">
+  <img width="600" src="https://github.com/MartinStamenkovski/NSPersist/blob/master/logo.png">
+</p>
 A simple lightweight Core Data wrapper in Swift.
 
 I created this wrapper mostly to ease my workflow in the projects, if you find it useful feel free to use it and modify it to your needs.
