@@ -21,6 +21,7 @@ class NSPersistTests: XCTestCase {
     }
     
     func testPersistentContainerSetup() {
+
         XCTAssertNotNil(NSPersist.shared)
     }
     
