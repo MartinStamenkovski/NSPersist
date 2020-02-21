@@ -26,7 +26,13 @@ public final class InsertRequest<T> where T: NSManagedObject {
     class func shared(object: T.Type) -> InsertRequest<T> {
         return InsertRequest<T>()
     }
+    /**
+        Creates NSBatchInsertRequest.
     
+        - Parameter values: List of dictionaries to insert , the keys should match with the Entity attribute names.
+        - Parameter context: In which context to execute the request, default is newBackgroundContext.
+        - Parameter completion: The block the execute when the request finishes, true if the request is success or false.
+     */
     @available(iOS 13, OSX 10.15, watchOS 6.0, tvOS 13, *)
     public func insertBatchAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
         let entity = String(describing: T.self)

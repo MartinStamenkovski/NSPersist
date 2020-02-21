@@ -13,7 +13,7 @@
     <a title="  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (81% documented)</p>
+        <p><a href="index.html"> Docs</a> (85% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -65,6 +65,10 @@
             
             <h1 id='nspersist' class='heading'>NSPersist</h1>
 
+<p align="center">
+  <img width="600" src="https://github.com/MartinStamenkovski/NSPersist/blob/master/logo.png">
+</p>
+
 <p>A simple lightweight Core Data wrapper in Swift.</p>
 
 <p>I created this wrapper mostly to ease my workflow in the projects, if you find it useful feel free to use it and modify it to your needs.</p>
@@ -80,39 +84,42 @@
 <li>[x] UndoManager (iOS), macOS has one by default.</li>
 <li>[x] Lightweight migrations.</li>
 <li>[x] Tests</li>
+<li>[x] Multiple store configurations</li>
 <li>[ ] CloudKit Synchronization</li>
 </ul>
 <h2 id='usage' class='heading'>Usage</h2>
 
 <p>Check out the <a href="https://martinstamenkovski.github.io/NSPersist/">Documentation</a> for more information.</p>
 
-<p>First call <code>NSPersist.setup(withName: &quot;name&quot;)</code> to provide the name of the data model to be used.<br>
+<p>First call <code>NSPersist.setup(withName: &quot;&lt;#Model name#&gt;&quot;)</code> or <code>NSPersist.setup(withName: &quot;&lt;#Model name#&gt;&quot;, configurations: [&quot;&lt;# Configuration name #&gt;&quot;])</code> to provide the name of the data model to be used and additional configurations.<br>
 This typically is called in <code>AppDelegate didFinishLaunchingWithOptions</code> once.</p>
 
 <p><strong>Example add record</strong>:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">NSTestUser</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span>
-<span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Test Name"</span>
-<span class="n">user</span><span class="o">.</span><span class="nf">save</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">note</span> <span class="o">=</span> <span class="kt">NSExampleNote</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span>
+<span class="n">note</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">textFieldTitle</span><span class="o">.</span><span class="n">text</span>
+<span class="n">note</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">textFieldNote</span><span class="o">.</span><span class="n">text</span>
+<span class="n">note</span><span class="o">.</span><span class="n">createdAt</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+<span class="n">note</span><span class="o">.</span><span class="n">updatedAt</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+<span class="n">note</span><span class="o">.</span><span class="nf">save</span><span class="p">()</span>
 </code></pre>
 
-<p>As you can see the main context is accessible via <code>.main</code> property, and <code>user.save()</code> inserts in the main context by default,  or you can specify another context in its parameter like this <code>user.save(context: backgroundContext)</code>.  </p>
+<p>As you can see the main context is accessible via <code>.main</code> property, and <code>note.save()</code> inserts in the main context by default,  or you can specify another context in its parameter like this <code>note.save(context: backgroundContext)</code>.  </p>
 
 <p><strong>Example usage of get request or <code>fetch</code></strong></p>
-<pre class="highlight swift"><code><span class="kt">NSPersist</span><span class="o">.</span><span class="n">shared</span>
-<span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">NSExampleDogF</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="k">in</span>
-    <span class="n">request</span><span class="o">.</span><span class="n">predicate</span> <span class="o">=</span> <span class="kt">NSPredicate</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="s">"nsexampleuser.name = %@"</span><span class="p">,</span> <span class="s">"Test"</span><span class="p">)</span>
-    <span class="n">request</span><span class="o">.</span><span class="n">sortDescriptors</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"name"</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kc">false</span><span class="p">)]</span>
-<span class="p">}</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="kt">NSPersist</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">NSExampleNote</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="k">in</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">predicate</span> <span class="o">=</span> <span class="kt">NSPredicate</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="s">"favorite = %d"</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">sortDescriptors</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"createdAt"</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kc">false</span><span class="p">)]</span>
+<span class="p">})</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span>
 </code></pre>
 
-<p>returns list of dogs where user name is <em>Test</em>.</p>
+<p>returns list of favorite notes in descending order.</p>
 
 <p><em>As I said this is a lightweight wrapper, you are still working with the <code>NSFetchRequest</code> that you get from the completion block.</em></p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-02-18)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-02-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

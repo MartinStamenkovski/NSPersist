@@ -10,7 +10,7 @@ import CoreData
 import NSPersist
 
 class NotesViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     lazy var fetchedResultsController: NSFetchedResultsController<NSExampleNote> = {
@@ -21,10 +21,10 @@ class NotesViewController: UIViewController {
         controller.delegate = self
         return controller
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         do {
             try fetchedResultsController.performFetch()
         } catch {
@@ -34,7 +34,7 @@ class NotesViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editNoteVC = segue.destination as? AddEditNoteTableViewController {
@@ -45,7 +45,7 @@ class NotesViewController: UIViewController {
 
 extension NotesViewController: NSFetchedResultsControllerDelegate {
     
-   
+    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .delete:
@@ -78,11 +78,25 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableViewCell", for: indexPath) as! NoteTableViewCell
         let note = fetchedResultsController.object(at: indexPath)
-        cell.textLabel?.text = note.title
-
+        cell.labelTitle.text = note.title
+        if #available(iOS 13.0, *) {
+            let image = note.favorite ? UIImage(systemName: "heart.fill") :  UIImage(systemName: "heart")
+            cell.imageViewHeart.image = image
+        }
+        
+        cell.onHeartTapped = {
+            note.favorite = !note.favorite
+            note.save()
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let note = fetchedResultsController.object(at: indexPath)
+        note.favorite = !note.favorite
+        note.save()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

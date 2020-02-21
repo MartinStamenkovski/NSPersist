@@ -31,20 +31,22 @@ This typically is called in `AppDelegate didFinishLaunchingWithOptions` once.
 **Example add record**:
 
 ```swift
-let user = NSTestUser(context: .main)
-user.name = "Test Name"
-user.save()
+let note = NSExampleNote(context: .main)
+note.title = textFieldTitle.text
+note.body = textFieldNote.text
+note.createdAt = Date()
+note.updatedAt = Date()
+note.save()
 ```
-As you can see the main context is accessible via `.main` property, and `user.save()` inserts in the main context by default,  or you can specify another context in its parameter like this `user.save(context: backgroundContext)`.  
+As you can see the main context is accessible via `.main` property, and `note.save()` inserts in the main context by default,  or you can specify another context in its parameter like this `note.save(context: backgroundContext)`.  
 
 **Example usage of get request or `fetch`**
 ```swift
-NSPersist.shared
-.request(NSExampleDogF.self) { (request) in
-    request.predicate = NSPredicate(format: "nsexampleuser.name = %@", "Test")
-    request.sortDescriptors = [.init(key: "name", ascending: false)]
-}.get()
+NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
+    request.predicate = NSPredicate(format: "favorite = %d", true)
+    request.sortDescriptors = [.init(key: "createdAt", ascending: false)]
+}).get()
 ```
-returns list of dogs where user name is *Test*.
+returns list of favorite notes in descending order.
 
 *As I said this is a lightweight wrapper, you are still working with the `NSFetchRequest` that you get from the completion block.*

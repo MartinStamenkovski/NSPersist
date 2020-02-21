@@ -28,8 +28,9 @@
 		324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F723F5EF120022F788 /* AppDelegate.swift */; };
 		325616CD23F719AE000E2010 /* NSPersist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; };
 		325616CE23F719AE000E2010 /* NSPersist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		325B2C8924004F7A00E16804 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */; };
+		325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8A2400578900E16804 /* NoteTableViewCell.swift */; };
 		5B4A790523FAA9D200037C8F /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B4A790323FAA9D200037C8F /* NSPersistTestModel.xcdatamodeld */; };
-		5B989C6F23F68DDF00CA6D52 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B989C6E23F68DDF00CA6D52 /* users.json */; };
 		5BA2C9F223FBD95E008EDD21 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */; };
 		5BA2C9F423FBDB76008EDD21 /* AddEditNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */; };
 		5BA2C9F723FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F523FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld */; };
@@ -91,8 +92,9 @@
 		324FE1DF23F5EB950022F788 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		324FE1F723F5EF120022F788 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		325B2C8A2400578900E16804 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		5B4A790423FAA9D200037C8F /* NSPersistTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSPersistTestModel.xcdatamodel; sourceTree = "<group>"; };
-		5B989C6E23F68DDF00CA6D52 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditNoteTableViewController.swift; sourceTree = "<group>"; };
 		5BA2C9F623FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSExampleNoteModel.xcdatamodel; sourceTree = "<group>"; };
@@ -141,15 +143,16 @@
 			isa = PBXGroup;
 			children = (
 				5BA2C9F523FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld */,
+				325B2C8A2400578900E16804 /* NoteTableViewCell.swift */,
 				5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */,
 				5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */,
+				325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */,
 				324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */,
 				324FE1DF23F5EB950022F788 /* Main.storyboard */,
 				324FE1D223F5EB720022F788 /* Assets.xcassets */,
 				324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */,
 				324FE1F723F5EF120022F788 /* AppDelegate.swift */,
 				324FE1D723F5EB720022F788 /* Info.plist */,
-				5B989C6E23F68DDF00CA6D52 /* users.json */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -337,7 +340,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B989C6F23F68DDF00CA6D52 /* users.json in Resources */,
 				324FE1E923F5EB950022F788 /* Main.storyboard in Resources */,
 				324FE1D323F5EB720022F788 /* Assets.xcassets in Resources */,
 				324FE1E623F5EB950022F788 /* LaunchScreen.storyboard in Resources */,
@@ -354,7 +356,9 @@
 				5BA2C9F223FBD95E008EDD21 /* NotesViewController.swift in Sources */,
 				324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */,
 				324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */,
+				325B2C8924004F7A00E16804 /* FavoritesTableViewController.swift in Sources */,
 				5BA2C9F423FBDB76008EDD21 /* AddEditNoteTableViewController.swift in Sources */,
+				325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */,
 				5BA2C9F723FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

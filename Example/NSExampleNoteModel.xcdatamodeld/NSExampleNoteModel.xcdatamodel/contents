@@ -3,16 +3,11 @@
     <entity name="NSExampleNote" representedClassName="NSExampleNote" syncable="YES" codeGenerationType="class">
         <attribute name="body" optional="YES" attributeType="String"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="nsexampletag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NSExampleTag" inverseName="nsexamplenote" inverseEntity="NSExampleTag"/>
-    </entity>
-    <entity name="NSExampleTag" representedClassName="NSExampleTag" syncable="YES" codeGenerationType="class">
-        <attribute name="tag" optional="YES" attributeType="String"/>
-        <relationship name="nsexamplenote" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSExampleNote" inverseName="nsexampletag" inverseEntity="NSExampleNote"/>
     </entity>
     <elements>
         <element name="NSExampleNote" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="NSExampleTag" positionX="157.94140625" positionY="26.9921875" width="128" height="73"/>
     </elements>
 </model>
