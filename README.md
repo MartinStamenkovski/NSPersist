@@ -52,3 +52,6 @@ NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
 returns list of favorite notes in descending order.
 
 *As I said this is a lightweight wrapper, you are still working with the `NSFetchRequest` that you get from the completion block.*
+
+## License
+NSPersist is released under [MIT License](https://github.com/MartinStamenkovski/NSPersist/blob/master/LICENSE)
