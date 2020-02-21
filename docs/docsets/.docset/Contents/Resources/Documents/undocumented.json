@@ -1,40 +1,33 @@
 {
   "warnings": [
     {
-      "file": "/Users/martin/Documents/libs/NSPersist/Sources/NSPersist/InsertRequest.swift",
-      "line": 31,
-      "symbol": "InsertRequest.insertBatchAsync(_:context:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataClass.swift",
+      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataClass.swift",
       "line": 14,
       "symbol": "NSTestUser",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataClass.swift",
+      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataClass.swift",
       "line": 14,
       "symbol": "NSTestUser",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataProperties.swift",
+      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataProperties.swift",
       "line": 16,
       "symbol": "NSTestUser.fetchRequest()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Documents/libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataProperties.swift",
+      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/build/NSPersist.build/Release-iphoneos/NSPersist.build/DerivedSources/CoreDataGenerated/NSPersistTestModel/NSTestUser+CoreDataProperties.swift",
       "line": 20,
       "symbol": "NSTestUser.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/martin/Documents/libs/NSPersist"
+  "source_directory": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist"
 }

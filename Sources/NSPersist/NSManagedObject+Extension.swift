@@ -34,7 +34,6 @@ extension NSManagedObject {
      
      - Parameter completion:
         The block to execute when deletion finishes.
-     
         The block takes one parameter Bool, true if the request is success or false.
      */
     public func delete(_ completion: ((Bool) -> Void)? = nil) {

@@ -37,12 +37,12 @@ public extension FetchRequest {
      Performs the delete request asynchronously, using the NSBatchDeleteRequest.
         
      - NSBatchDeleteRequest:
-        
+     
         A request to Core Data to do a batch delete of data in a persistent store without loading any data into memory.
+     
      
      - Parameter completion:
         The block to execute  after the request finishes.
-     
         This block takes one parameter Bool, true if the request is successful or false.
      */
     func deleteAsync(completion: @escaping ((Bool) -> Void)) {

@@ -46,8 +46,7 @@ public final class UpdateRequest<T> where T: NSManagedObject {
      
      - Parameter completion:
         The block to execute  after the request finishes.
-     
-        This block takes one parameter Bool, true if the request is successful or false.
+        The block takes one parameter Bool, true if the request is successful or false.
      */
     public func updateBatchAsync(_ completion: @escaping((Bool) -> Void)) {
         let backgroundContext = NSPersist.shared.newBackgroundContext()
