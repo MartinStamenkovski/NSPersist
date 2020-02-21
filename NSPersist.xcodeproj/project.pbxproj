@@ -32,6 +32,7 @@
 		325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8A2400578900E16804 /* NoteTableViewCell.swift */; };
 		325B2D0524008A8800E16804 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */; };
 		325B2D0624008AD100E16804 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */; };
+		325B2D0924008D5700E16804 /* NSTestUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0724008D5700E16804 /* NSTestUser+CoreDataClass.swift */; };
 		5BA2C9F223FBD95E008EDD21 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */; };
 		5BA2C9F423FBDB76008EDD21 /* AddEditNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */; };
 		5BA2C9F723FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F523FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld */; };
@@ -103,6 +104,7 @@
 		325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		325B2C8A2400578900E16804 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		325B2D0424008A8800E16804 /* NSPersistTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSPersistTestModel.xcdatamodel; sourceTree = "<group>"; };
+		325B2D0724008D5700E16804 /* NSTestUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTestUser+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditNoteTableViewController.swift; sourceTree = "<group>"; };
 		5BA2C9F623FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSExampleNoteModel.xcdatamodel; sourceTree = "<group>"; };
@@ -175,7 +177,6 @@
 		OBJ_16 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */,
 				OBJ_17 /* NSPersistTests */,
 			);
 			path = Tests;
@@ -184,6 +185,8 @@
 		OBJ_17 /* NSPersistTests */ = {
 			isa = PBXGroup;
 			children = (
+				325B2D0724008D5700E16804 /* NSTestUser+CoreDataClass.swift */,
+				325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */,
 				OBJ_18 /* NSPersistTests.swift */,
 			);
 			path = NSPersistTests;
@@ -407,6 +410,7 @@
 			files = (
 				OBJ_53 /* NSPersistTests.swift in Sources */,
 				325B2D0524008A8800E16804 /* NSPersistTestModel.xcdatamodeld in Sources */,
+				325B2D0924008D5700E16804 /* NSTestUser+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
