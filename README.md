@@ -1,7 +1,9 @@
-# NSPersist
+<p align="center">
+ <img width="600" src="https://github.com/MartinStamenkovski/NSPersist/blob/master/logo.png">
+</p>
 
 <p align="center">
-  <img width="600" src="https://github.com/MartinStamenkovski/NSPersist/blob/master/logo.png">
+  <img src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-blue">
 </p>
 A simple lightweight Core Data wrapper in Swift.
 
