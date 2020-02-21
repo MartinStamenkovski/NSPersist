@@ -9,7 +9,7 @@
 import XCTest
 @testable import NSPersist
 
-@available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
+@available(iOS 10, OSX 10.12, tvOS 10, *)
 class NSPersistTests: XCTestCase {
     
     override func setUp() {

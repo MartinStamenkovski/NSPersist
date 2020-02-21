@@ -16,11 +16,10 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 - [x] InsertBatchAsync
 - [x] getAsync (*fetch async*)
 - [x] get (*fetch*)
-- [x] UndoManager (iOS), macOS has one by default.
+- [x] UndoManager
 - [x] Lightweight migrations.
-- [x] Tests
 - [x] Multiple store configurations
-- [ ] CloudKit Synchronization
+- [ ] CloudKit Synchronization (in development)
 
 
 ## Usage
@@ -53,5 +52,13 @@ returns list of favorite notes in descending order.
 
 *As I said this is a lightweight wrapper, you are still working with the `NSFetchRequest` that you get from the completion block.*
 
+## Instalation
+Currently NSPersist is only available through Swift Package Manager.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "0.0.1")
+]
+```
 ## License
 NSPersist is released under [MIT License](https://github.com/MartinStamenkovski/NSPersist/blob/master/LICENSE)
