@@ -21,11 +21,13 @@ class NSPersistTests: XCTestCase {
     }
     
     func testPersistentContainerSetup() {
-
+        
         XCTAssertNotNil(NSPersist.shared)
     }
     
     func testInsertRecord() {
+        XCTAssertNotNil(NSPersist.shared)
+        
         let user = NSTestUser(context: .main)
         user.name = "Test User"
         user.save()
@@ -39,7 +41,9 @@ class NSPersistTests: XCTestCase {
         XCTAssertEqual(users.last?.name, "Test User")
     }
     
-   func testAsyncRequestNoRetainCycle() {
+    func testAsyncRequestNoRetainCycle() {
+        
+        XCTAssertNotNil(NSPersist.shared)
         
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -64,6 +68,8 @@ class NSPersistTests: XCTestCase {
     
     func testFetchRequestNoRetainCycle() {
         
+        XCTAssertNotNil(NSPersist.shared)
+        
         var captureObject = NSObject()
         weak var weakObject = captureObject
         
@@ -86,6 +92,8 @@ class NSPersistTests: XCTestCase {
     
     func testUpdateBatchAsyncNoRetainCycle() {
         
+        XCTAssertNotNil(NSPersist.shared)
+        
         var captureObject = NSObject()
         weak var weakObject = captureObject
         
@@ -106,8 +114,10 @@ class NSPersistTests: XCTestCase {
         XCTAssertNil(weakObject)
     }
     
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 10.15, tvOS 13, *)
     func testBatchInsertAsyncNoRetainCycle() {
+        
+        XCTAssertNotNil(NSPersist.shared)
         
         var captureObject = NSObject()
         weak var weakObject = captureObject
@@ -136,6 +146,8 @@ class NSPersistTests: XCTestCase {
     }
     
     func testDeleteAsyncNoRetainCycle() {
+        
+        XCTAssertNotNil(NSPersist.shared)
         
         var captureObject = NSObject()
         weak var weakObject = captureObject

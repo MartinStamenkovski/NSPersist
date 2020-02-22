@@ -6,8 +6,9 @@
 //
 
 import UIKit
+#if os(iOS)
 import NSPersist
-
+#endif
 class FavoritesTableViewController: UITableViewController {
 
     var favorites: [NSExampleNote] = []

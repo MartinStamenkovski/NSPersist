@@ -21,18 +21,17 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3234790024013E3000F51933 /* NSTestUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */; };
+		3234796324014D8E00F51933 /* NSPersist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		324FE1D323F5EB720022F788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1D223F5EB720022F788 /* Assets.xcassets */; };
 		324FE1E623F5EB950022F788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */; };
 		324FE1E923F5EB950022F788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DF23F5EB950022F788 /* Main.storyboard */; };
 		324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */; };
 		324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F723F5EF120022F788 /* AppDelegate.swift */; };
-		325616CD23F719AE000E2010 /* NSPersist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; };
-		325616CE23F719AE000E2010 /* NSPersist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		325B2C8924004F7A00E16804 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */; };
 		325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8A2400578900E16804 /* NoteTableViewCell.swift */; };
 		325B2D0524008A8800E16804 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */; };
 		325B2D0624008AD100E16804 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */; };
-		325B2D0924008D5700E16804 /* NSTestUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0724008D5700E16804 /* NSTestUser+CoreDataClass.swift */; };
 		5BA2C9F223FBD95E008EDD21 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */; };
 		5BA2C9F423FBDB76008EDD21 /* AddEditNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */; };
 		5BA2C9F723FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2C9F523FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld */; };
@@ -86,7 +85,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				325616CE23F719AE000E2010 /* NSPersist.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +92,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTestUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		324FE1C723F5EB700022F788 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		324FE1D223F5EB720022F788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		324FE1D723F5EB720022F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +103,6 @@
 		325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		325B2C8A2400578900E16804 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		325B2D0424008A8800E16804 /* NSPersistTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSPersistTestModel.xcdatamodel; sourceTree = "<group>"; };
-		325B2D0724008D5700E16804 /* NSTestUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTestUser+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditNoteTableViewController.swift; sourceTree = "<group>"; };
 		5BA2C9F623FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSExampleNoteModel.xcdatamodel; sourceTree = "<group>"; };
@@ -127,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325616CD23F719AE000E2010 /* NSPersist.framework in Frameworks */,
+				3234796324014D8E00F51933 /* NSPersist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +183,7 @@
 		OBJ_17 /* NSPersistTests */ = {
 			isa = PBXGroup;
 			children = (
-				325B2D0724008D5700E16804 /* NSTestUser+CoreDataClass.swift */,
+				323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */,
 				325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */,
 				OBJ_18 /* NSPersistTests.swift */,
 			);
@@ -326,6 +324,9 @@
 					"NSPersist::NSPersist" = {
 						DevelopmentTeam = UL53AFK9P6;
 					};
+					"NSPersist::NSPersistTests" = {
+						DevelopmentTeam = UL53AFK9P6;
+					};
 					"NSPersist::SwiftPMPackageDescription" = {
 						DevelopmentTeam = UL53AFK9P6;
 					};
@@ -410,7 +411,7 @@
 			files = (
 				OBJ_53 /* NSPersistTests.swift in Sources */,
 				325B2D0524008A8800E16804 /* NSPersistTestModel.xcdatamodeld in Sources */,
-				325B2D0924008D5700E16804 /* NSTestUser+CoreDataClass.swift in Sources */,
+				3234790024013E3000F51933 /* NSTestUser+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +472,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -494,13 +495,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stamenkovski.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -535,7 +538,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
@@ -557,8 +560,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stamenkovski.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -578,6 +582,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -610,6 +615,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -646,7 +652,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -664,7 +670,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -684,7 +691,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -702,7 +709,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -724,6 +732,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = UL53AFK9P6;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -740,7 +749,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NSPersistTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
@@ -749,6 +758,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = UL53AFK9P6;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -765,7 +775,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NSPersistTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;

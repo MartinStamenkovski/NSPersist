@@ -6,8 +6,9 @@
 //
 
 import UIKit
+#if os(iOS)
 import NSPersist
-
+#endif
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

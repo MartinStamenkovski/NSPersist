@@ -6,7 +6,9 @@
 //
 
 import UIKit
+#if os(iOS)
 import NSPersist
+#endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

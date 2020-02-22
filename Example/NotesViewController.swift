@@ -7,7 +7,9 @@
 
 import UIKit
 import CoreData
+#if os(iOS)
 import NSPersist
+#endif
 
 class NotesViewController: UIViewController {
     
