@@ -57,7 +57,7 @@ Currently NSPersist is only available through Swift Package Manager.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "0.0.1")
+    .package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "0.0.2")
 ]
 ```
 ## License
