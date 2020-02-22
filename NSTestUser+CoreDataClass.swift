@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(NSTestUser)
 public class NSTestUser: NSManagedObject {
 
     @NSManaged public var name: String?

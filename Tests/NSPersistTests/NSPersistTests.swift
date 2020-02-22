@@ -25,7 +25,19 @@ class NSPersistTests: XCTestCase {
         XCTAssertNotNil(NSPersist.shared)
     }
     
-    
+    func testInsertRecord() {
+        let user = NSTestUser(context: .main)
+        user.name = "Test User"
+        user.save()
+        
+        let users = NSPersist.shared.request(NSTestUser.self).get()
+        
+        XCTAssertNotNil(users)
+        XCTAssertTrue(users.count > 0)
+        
+        XCTAssertNotNil(users.last)
+        XCTAssertEqual(users.last?.name, "Test User")
+    }
     
    func testAsyncRequestNoRetainCycle() {
         
