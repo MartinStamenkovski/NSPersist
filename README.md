@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/MartinStamenkovski/NSPersist/actions">
-   <img src="https://github.com/MartinStamenkovski/NSPersist/workflows/NSPersistTest/badge.svg">
+   <img src="https://github.com/MartinStamenkovski/NSPersist/workflows/NSPersist%20CI/badge.svg">
  </a>
   <img src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-blue">
   <img src="https://img.shields.io/github/languages/top/MartinStamenkovski/NSPersist?color=orange">
