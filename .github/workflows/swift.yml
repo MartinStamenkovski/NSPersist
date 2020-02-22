@@ -1,4 +1,4 @@
-name: NSPersistTest
+name: NSPersist CI
 
 on: [push]
 
