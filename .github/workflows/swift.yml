@@ -12,8 +12,8 @@ jobs:
     - name: Build
       run: swift build -v
     - name: Run iOS tests
-      run: xcodebuild test -destination 'name=iPhone 11' -scheme 'NSPersist-Package'
+      run: xcodebuild test -destination 'name=iPhone 11' -scheme 'NSPersist-Package' | xcpretty
     - name: Run tvOS tests
-      run: xcodebuild test -destination 'OS=13.3,name=Apple TV 4K' -scheme 'NSPersist-Package'
+      run: xcodebuild test -destination 'OS=13.3,name=Apple TV 4K' -scheme 'NSPersist-Package' | xcpretty
     - name: Run macOS tests
-      run: xcodebuild test - destination 'macOS' -scheme 'NSPersist-Package'
+      run: xcodebuild test -destination 'macOS' -scheme 'NSPersist-Package' | xcpretty
