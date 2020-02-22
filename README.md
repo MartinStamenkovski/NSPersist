@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/workflow/status/MartinStamenkovski/NSPersist/NSPersistTest">
   <img src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20watchos%20%7C%20tvos-blue">
 </p>
 A simple lightweight Core Data wrapper in Swift.
