@@ -45,7 +45,7 @@ note.save()
 ```
 As you can see the main context is accessible via `.main` property, and `note.save()` inserts in the main context by default,  or you can specify another context in its parameter like this `note.save(context: backgroundContext)`.  
 
-**Example usage of get request or `fetch` in Swift**
+**Example usage of get request or `fetch`**
 ```swift
 NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
     request.predicate = NSPredicate(format: "favorite = %d", true)
