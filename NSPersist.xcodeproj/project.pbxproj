@@ -96,7 +96,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		32315AE42412CB5100342588 /* NSPersist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPersist-Bridging-Header.h"; sourceTree = "<group>"; };
 		323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTestUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		323794652412913900A722C8 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		323794662412913900A722C8 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
@@ -164,7 +163,7 @@
 			path = ObjC;
 			sourceTree = "<group>";
 		};
-		3237946C2412A05300A722C8 /* SwiftClasses */ = {
+		3237946C2412A05300A722C8 /* Request */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* FetchRequest+Delete.swift */,
@@ -172,7 +171,7 @@
 				OBJ_11 /* InsertRequest.swift */,
 				OBJ_15 /* UpdateRequest.swift */,
 			);
-			path = SwiftClasses;
+			path = Request;
 			sourceTree = "<group>";
 		};
 		3237946D2412A09400A722C8 /* Core */ = {
@@ -243,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
-				32315AE42412CB5100342588 /* NSPersist-Bridging-Header.h */,
 				OBJ_7 /* Sources */,
 				OBJ_16 /* Tests */,
 				324FE1C823F5EB710022F788 /* Example */,
@@ -265,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				3237946D2412A09400A722C8 /* Core */,
-				3237946C2412A05300A722C8 /* SwiftClasses */,
+				3237946C2412A05300A722C8 /* Request */,
 				3237946B2412A03F00A722C8 /* ObjC */,
 			);
 			path = NSPersist;
@@ -638,7 +636,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "NSPersist-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -679,7 +677,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "NSPersist-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";

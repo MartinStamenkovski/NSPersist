@@ -27,13 +27,7 @@ let package = Package(
         .target(
             name: "NSPersist",
             dependencies: [],
-            path: "Sources",
-            sources: ["Core", "SwiftClasses","ObjC"],
-            publicHeadersPath: "Core",
-            cSettings: [
-                .headerSearchPath("ObjC")
-            ]
-        ),
+            path: "Sources"),
         .testTarget(
             name: "NSPersistTests",
             dependencies: ["NSPersist"],
