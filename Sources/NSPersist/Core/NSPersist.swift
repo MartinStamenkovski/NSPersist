@@ -150,28 +150,3 @@ extension NSPersist {
     }
 }
 
-//MARK: - ObjectiveC methods;
-extension NSPersist {
-    
-    /**
-     Creates and returns Fetch Request instance.
-     
-     - Parameter entityName: String.
-     - Parameter completion: The block to execute when NSFetchRequest is created, for further customization.
-     */
-    @objc
-    public func requestWith(entityName: String, completion: @escaping ((NSFetchRequest<NSManagedObject>) -> Void)) -> FetchRequestObjC {
-        return FetchRequestObjC().fetch(entityName: entityName, completion: completion)
-    }
-    
-    /**
-     Creates and returns Update Request instance.
-     
-     - Parameter entityName: String.
-     - Parameter completion: The block to execute when NSBatchUpdateRequest is created, for further customization.
-     */
-    @objc
-    public func updateRequest(entityName: String, completion: @escaping ((NSBatchUpdateRequest) -> Void)) -> UpdateRequestObjC {
-        return UpdateRequestObjC().batchRequest(entityName: entityName, completion)
-    }
-}

@@ -21,12 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		32315AE92412DAAA00342588 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315AE82412DAAA00342588 /* FavoritesTableViewController.swift */; };
 		3234790024013E3000F51933 /* NSTestUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */; };
 		323479642401601700F51933 /* NSPersist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; };
 		323479652401601700F51933 /* NSPersist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		323794672412913900A722C8 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323794662412913900A722C8 /* FavoritesViewController.m */; };
-		3237946A241297BD00A722C8 /* FetchRequest+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32379468241296DF00A722C8 /* FetchRequest+ObjC.swift */; };
-		3237946F2412A6B800A722C8 /* UpdateRequest+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3237946E2412A6B800A722C8 /* UpdateRequest+ObjC.swift */; };
 		324FE1D323F5EB720022F788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1D223F5EB720022F788 /* Assets.xcassets */; };
 		324FE1E623F5EB950022F788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */; };
 		324FE1E923F5EB950022F788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DF23F5EB950022F788 /* Main.storyboard */; };
@@ -96,11 +94,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		32315AE82412DAAA00342588 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTestUser+CoreDataClass.swift"; sourceTree = "<group>"; };
-		323794652412913900A722C8 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
-		323794662412913900A722C8 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
-		32379468241296DF00A722C8 /* FetchRequest+ObjC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchRequest+ObjC.swift"; sourceTree = "<group>"; };
-		3237946E2412A6B800A722C8 /* UpdateRequest+ObjC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateRequest+ObjC.swift"; sourceTree = "<group>"; };
 		324FE1C723F5EB700022F788 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		324FE1D223F5EB720022F788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		324FE1D723F5EB720022F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,15 +149,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3237946B2412A03F00A722C8 /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				32379468241296DF00A722C8 /* FetchRequest+ObjC.swift */,
-				3237946E2412A6B800A722C8 /* UpdateRequest+ObjC.swift */,
-			);
-			path = ObjC;
-			sourceTree = "<group>";
-		};
 		3237946C2412A05300A722C8 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,8 +177,7 @@
 				325B2C8A2400578900E16804 /* NoteTableViewCell.swift */,
 				5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */,
 				5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */,
-				323794652412913900A722C8 /* FavoritesViewController.h */,
-				323794662412913900A722C8 /* FavoritesViewController.m */,
+				32315AE82412DAAA00342588 /* FavoritesTableViewController.swift */,
 				324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */,
 				324FE1DF23F5EB950022F788 /* Main.storyboard */,
 				324FE1D223F5EB720022F788 /* Assets.xcassets */,
@@ -264,7 +249,6 @@
 			children = (
 				3237946D2412A09400A722C8 /* Core */,
 				3237946C2412A05300A722C8 /* Request */,
-				3237946B2412A03F00A722C8 /* ObjC */,
 			);
 			path = NSPersist;
 			sourceTree = "<group>";
@@ -410,9 +394,9 @@
 				5BA2C9F223FBD95E008EDD21 /* NotesViewController.swift in Sources */,
 				324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */,
 				324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */,
+				32315AE92412DAAA00342588 /* FavoritesTableViewController.swift in Sources */,
 				5BA2C9F423FBDB76008EDD21 /* AddEditNoteTableViewController.swift in Sources */,
 				325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */,
-				323794672412913900A722C8 /* FavoritesViewController.m in Sources */,
 				5BA2C9F723FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,10 +411,8 @@
 				325B2D0624008AD100E16804 /* NSPersistTestModel.xcdatamodeld in Sources */,
 				OBJ_32 /* NSContext+Extension.swift in Sources */,
 				OBJ_33 /* NSManagedObject+Extension.swift in Sources */,
-				3237946F2412A6B800A722C8 /* UpdateRequest+ObjC.swift in Sources */,
 				OBJ_34 /* NSPersist.swift in Sources */,
 				OBJ_35 /* UpdateRequest.swift in Sources */,
-				3237946A241297BD00A722C8 /* FetchRequest+ObjC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
