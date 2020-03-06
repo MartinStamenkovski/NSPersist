@@ -117,32 +117,32 @@ public final class NSPersist: NSPersistentContainer {
 extension NSPersist {
     
     /**
-        Creates and returns Fetch Request instance.
-    
-        - Parameter object: NSManagedObject.
-        - Parameter completion: The block to execute when NSFetchRequest is created, for further customization.
+     Creates and returns Fetch Request instance.
+     
+     - Parameter object: NSManagedObject.
+     - Parameter completion: The block to execute when NSFetchRequest is created, for further customization.
      */
     public func request<T>(_ object: T.Type, completion: ((NSFetchRequest<T>) -> Void)? = nil) -> FetchRequest<T> where T: NSManagedObject {
         return FetchRequest.shared(object: object).fetch(completion: completion)
     }
     
     /**
-        Creates and returns Update Request instance.
-    
-        - Parameter object: NSManagedObject.
-        - Parameter completion: The block to execute when NSBatchUpdateRequest is created, for further customization.
+     Creates and returns Update Request instance.
+     
+     - Parameter object: NSManagedObject.
+     - Parameter completion: The block to execute when NSBatchUpdateRequest is created, for further customization.
      */
     public func update<T>(_ object: T.Type, completion: ((NSBatchUpdateRequest) -> Void)) -> UpdateRequest<T> where T: NSManagedObject {
         return UpdateRequest.shared(object: object).batchRequest(completion)
     }
     
     /**
-        Creates and returns Insert Request instance.
-    
-        - Parameter object: NSManagedObject.
-        - Parameter values: List of dictionaries to insert , the keys should match with the Entity attribute names.
-        - Parameter context: In which context to execute the request, default is newBackgroundContext.
-        - Parameter completion: The block the execute when the request finishes, true if the request is success or false.
+     Creates and returns Insert Request instance.
+     
+     - Parameter object: NSManagedObject.
+     - Parameter values: List of dictionaries to insert , the keys should match with the Entity attribute names.
+     - Parameter context: In which context to execute the request, default is newBackgroundContext.
+     - Parameter completion: The block the execute when the request finishes, true if the request is success or false.
      */
     @available(iOS 13, OSX 10.15, watchOS 6.0, tvOS 13, *)
     public func insertBatchAsync<T>(_ object: T.Type, values: [[String: Any]], in context: NSManagedObjectContext = .newBackgroundContext(), completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
@@ -153,11 +153,23 @@ extension NSPersist {
 //MARK: - ObjectiveC methods;
 extension NSPersist {
     
+    /**
+     Creates and returns Fetch Request instance.
+     
+     - Parameter entityName: String.
+     - Parameter completion: The block to execute when NSFetchRequest is created, for further customization.
+     */
     @objc
     public func requestWith(entityName: String, completion: @escaping ((NSFetchRequest<NSManagedObject>) -> Void)) -> FetchRequestObjC {
         return FetchRequestObjC().fetch(entityName: entityName, completion: completion)
     }
     
+    /**
+     Creates and returns Update Request instance.
+     
+     - Parameter entityName: String.
+     - Parameter completion: The block to execute when NSBatchUpdateRequest is created, for further customization.
+     */
     @objc
     public func updateRequest(entityName: String, completion: @escaping ((NSBatchUpdateRequest) -> Void)) -> UpdateRequestObjC {
         return UpdateRequestObjC().batchRequest(entityName: entityName, completion)

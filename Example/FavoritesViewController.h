@@ -6,9 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#if TARGET_OS_IPHONE
-#import "NSPersist/NSPersist-Swift.h"
-#endif
+
 
 NS_ASSUME_NONNULL_BEGIN
 

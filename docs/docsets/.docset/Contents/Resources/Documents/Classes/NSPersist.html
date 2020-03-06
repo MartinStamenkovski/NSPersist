@@ -14,7 +14,7 @@
     <a title="NSPersist Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (94% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -487,7 +487,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates and returns Fetch Request instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -498,6 +498,37 @@
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestWith</span><span class="p">(</span><span class="nv">entityName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">NSFetchRequest</span><span class="o">&lt;</span><span class="kt">NSManagedObject</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/FetchRequestObjC.html">FetchRequestObjC</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entityName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute when NSFetchRequest is created, for further customization.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -515,7 +546,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates and returns Update Request instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -526,6 +557,37 @@
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateRequest</span><span class="p">(</span><span class="nv">entityName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">NSBatchUpdateRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UpdateRequestObjC.html">UpdateRequestObjC</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entityName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute when NSBatchUpdateRequest is created, for further customization.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

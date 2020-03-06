@@ -357,6 +357,7 @@
 					};
 					"NSPersist::NSPersist" = {
 						DevelopmentTeam = UL53AFK9P6;
+						LastSwiftMigration = 1130;
 					};
 					"NSPersist::NSPersistTests" = {
 						DevelopmentTeam = UL53AFK9P6;
@@ -608,6 +609,7 @@
 		OBJ_26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
@@ -632,6 +634,9 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TARGET_NAME = NSPersist;
@@ -643,6 +648,7 @@
 		OBJ_27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
@@ -667,6 +673,8 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TARGET_NAME = NSPersist;

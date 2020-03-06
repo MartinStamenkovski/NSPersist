@@ -7,6 +7,10 @@
 
 #import "FavoritesViewController.h"
 
+#if TARGET_OS_IPHONE
+#import "NSPersist/NSPersist-Swift.h"
+#endif
+
 @interface FavoritesViewController ()
 
 @end
