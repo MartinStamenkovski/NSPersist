@@ -1,6 +1,19 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSPersist.swift",
+      "line": 157,
+      "symbol": "NSPersist.requestWith(entityName:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSPersist.swift",
+      "line": 162,
+      "symbol": "NSPersist.updateRequest(entityName:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist"
 }

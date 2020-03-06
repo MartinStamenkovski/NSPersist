@@ -14,7 +14,7 @@
     <a title="NSPersist Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p><a href="../index.html"> Docs</a> (94% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -34,6 +34,9 @@
                 <a href="../Classes/FetchRequest.html">FetchRequest</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/FetchRequestObjC.html">FetchRequestObjC</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/InsertRequest.html">InsertRequest</a>
               </li>
               <li class="nav-group-task">
@@ -41,6 +44,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/UpdateRequest.html">UpdateRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UpdateRequestObjC.html">UpdateRequestObjC</a>
               </li>
             </ul>
           </li>
@@ -64,6 +70,7 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mi">10</span><span class="p">,</span> <span class="kt">OSX</span> <span class="mf">10.12</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mi">10</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NSPersist</span> <span class="p">:</span> <span class="kt">NSPersistentContainer</span></code></pre>
 
                 </div>
@@ -77,9 +84,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9NSPersistAAC5setup8withName14configurationsySS_SaySSGtFZ"></a>
+                    <a name="/c:@M@NSPersist@objc(cs)NSPersist(cm)setupWithName:configurations:"></a>
                     <a name="//apple_ref/swift/Method/setup(withName:configurations:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9NSPersistAAC5setup8withName14configurationsySS_SaySSGtFZ">setup(withName:configurations:)</a>
+                    <a class="token" href="#/c:@M@NSPersist@objc(cs)NSPersist(cm)setupWithName:configurations:">setup(withName:configurations:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -96,7 +103,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">setup</span><span class="p">(</span><span class="n">withName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">configurations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">setup</span><span class="p">(</span><span class="n">withName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">configurations</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
 
                         </div>
                       </div>
@@ -137,9 +145,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9NSPersistAAC6sharedABvpZ"></a>
+                    <a name="/c:@M@NSPersist@objc(cs)NSPersist(cpy)shared"></a>
                     <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9NSPersistAAC6sharedABvpZ">shared</a>
+                    <a class="token" href="#/c:@M@NSPersist@objc(cs)NSPersist(cpy)shared">shared</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -154,7 +162,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">NSPersist</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">NSPersist</span></code></pre>
 
                         </div>
                       </div>
@@ -164,9 +173,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9NSPersistAAC11undoManagerSo06NSUndoC0CvpZ"></a>
+                    <a name="/c:@M@NSPersist@objc(cs)NSPersist(cpy)undoManager"></a>
                     <a name="//apple_ref/swift/Variable/undoManager" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9NSPersistAAC11undoManagerSo06NSUndoC0CvpZ">undoManager</a>
+                    <a class="token" href="#/c:@M@NSPersist@objc(cs)NSPersist(cpy)undoManager">undoManager</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -183,7 +192,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">undoManager</span><span class="p">:</span> <span class="kt">UndoManager</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">undoManager</span><span class="p">:</span> <span class="kt">UndoManager</span></code></pre>
 
                         </div>
                       </div>
@@ -193,9 +203,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9NSPersistAAC11saveContext010backgroundC0ySo015NSManagedObjectC0CSg_tF"></a>
+                    <a name="/c:@M@NSPersist@objc(cs)NSPersist(im)saveContextWithBackgroundContext:"></a>
                     <a name="//apple_ref/swift/Method/saveContext(backgroundContext:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9NSPersistAAC11saveContext010backgroundC0ySo015NSManagedObjectC0CSg_tF">saveContext(backgroundContext:)</a>
+                    <a class="token" href="#/c:@M@NSPersist@objc(cs)NSPersist(im)saveContextWithBackgroundContext:">saveContext(backgroundContext:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,7 +222,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">saveContext</span><span class="p">(</span><span class="nv">backgroundContext</span><span class="p">:</span> <span class="kt">NSManagedObjectContext</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">saveContext</span><span class="p">(</span><span class="nv">backgroundContext</span><span class="p">:</span> <span class="kt">NSManagedObjectContext</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -452,10 +463,79 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ObjectiveC%20methods;"></a>
+                <a name="//apple_ref/swift/Section/ObjectiveC methods;" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ObjectiveC%20methods;"></a>
+                  <h3 class="section-name"><p>ObjectiveC methods;</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NSPersist@objc(cs)NSPersist(im)requestWithEntityName:completion:"></a>
+                    <a name="//apple_ref/swift/Method/requestWith(entityName:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NSPersist@objc(cs)NSPersist(im)requestWithEntityName:completion:">requestWith(entityName:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestWith</span><span class="p">(</span><span class="nv">entityName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">NSFetchRequest</span><span class="o">&lt;</span><span class="kt">NSManagedObject</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/FetchRequestObjC.html">FetchRequestObjC</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@NSPersist@objc(cs)NSPersist(im)updateRequestWithEntityName:completion:"></a>
+                    <a name="//apple_ref/swift/Method/updateRequest(entityName:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@NSPersist@objc(cs)NSPersist(im)updateRequestWithEntityName:completion:">updateRequest(entityName:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">updateRequest</span><span class="p">(</span><span class="nv">entityName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">NSBatchUpdateRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UpdateRequestObjC.html">UpdateRequestObjC</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-02-22)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

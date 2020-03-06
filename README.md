@@ -24,7 +24,7 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 - [x] UndoManager
 - [x] Lightweight migrations.
 - [x] Multiple store configurations
-- [ ] CloudKit Synchronization (in development)
+- [x] Objective-C
 
 
 ## Usage
@@ -46,15 +46,20 @@ note.save()
 ```
 As you can see the main context is accessible via `.main` property, and `note.save()` inserts in the main context by default,  or you can specify another context in its parameter like this `note.save(context: backgroundContext)`.  
 
-**Example usage of get request or `fetch`**
+**Example usage of get request or `fetch` in Swift**
 ```swift
 NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
     request.predicate = NSPredicate(format: "favorite = %d", true)
     request.sortDescriptors = [.init(key: "createdAt", ascending: false)]
 }).get()
 ```
-returns list of favorite notes in descending order.
-
+**Example usage of get request or `fetch` in Objective-C**
+```objective-c
+NSArray *favorites = [[[NSPersist shared] requestWithEntityName:@"NSExampleNote" completion:^(NSFetchRequest<NSManagedObject *> * _Nonnull request) {
+    request.predicate = [NSPredicate predicateWithFormat:@"favorite = true"];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:false]];
+}] get];
+```
 *As I said this is a lightweight wrapper, you are still working with the `NSFetchRequest` that you get from the completion block.*
 
 ## Instalation
@@ -62,7 +67,7 @@ Currently NSPersist is only available through Swift Package Manager.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "0.0.2")
+    .package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "0.0.3")
 ]
 ```
 ## License

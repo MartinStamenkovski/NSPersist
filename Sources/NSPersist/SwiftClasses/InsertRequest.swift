@@ -13,7 +13,7 @@ import CoreData
  
  Create and perform insert requests.
  */
-@available(iOS 10, OSX 10.12, watchOS 3.0, *)
+@available(iOS 13, OSX 10.15, watchOS 6.0, tvOS 13, *)
 public final class InsertRequest<T> where T: NSManagedObject {
     
     private init() { }
@@ -33,7 +33,6 @@ public final class InsertRequest<T> where T: NSManagedObject {
         - Parameter context: In which context to execute the request, default is newBackgroundContext.
         - Parameter completion: The block the execute when the request finishes, true if the request is success or false.
      */
-    @available(iOS 13, OSX 10.15, watchOS 6.0, tvOS 13, *)
     public func insertBatchAsync(_ values: [[String: Any]], context: NSManagedObjectContext, completion: @escaping ((Bool) -> Void)) {
         let entity = String(describing: T.self)
         

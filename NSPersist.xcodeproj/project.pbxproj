@@ -24,12 +24,14 @@
 		3234790024013E3000F51933 /* NSTestUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */; };
 		323479642401601700F51933 /* NSPersist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; };
 		323479652401601700F51933 /* NSPersist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		323794672412913900A722C8 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323794662412913900A722C8 /* FavoritesViewController.m */; };
+		3237946A241297BD00A722C8 /* FetchRequest+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32379468241296DF00A722C8 /* FetchRequest+ObjC.swift */; };
+		3237946F2412A6B800A722C8 /* UpdateRequest+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3237946E2412A6B800A722C8 /* UpdateRequest+ObjC.swift */; };
 		324FE1D323F5EB720022F788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1D223F5EB720022F788 /* Assets.xcassets */; };
 		324FE1E623F5EB950022F788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */; };
 		324FE1E923F5EB950022F788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324FE1DF23F5EB950022F788 /* Main.storyboard */; };
 		324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */; };
 		324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324FE1F723F5EF120022F788 /* AppDelegate.swift */; };
-		325B2C8924004F7A00E16804 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */; };
 		325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B2C8A2400578900E16804 /* NoteTableViewCell.swift */; };
 		325B2D0524008A8800E16804 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */; };
 		325B2D0624008AD100E16804 /* NSPersistTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */; };
@@ -95,6 +97,10 @@
 
 /* Begin PBXFileReference section */
 		323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTestUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		323794652412913900A722C8 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		323794662412913900A722C8 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		32379468241296DF00A722C8 /* FetchRequest+ObjC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchRequest+ObjC.swift"; sourceTree = "<group>"; };
+		3237946E2412A6B800A722C8 /* UpdateRequest+ObjC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateRequest+ObjC.swift"; sourceTree = "<group>"; };
 		324FE1C723F5EB700022F788 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		324FE1D223F5EB720022F788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		324FE1D723F5EB720022F788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +108,6 @@
 		324FE1DF23F5EB950022F788 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		324FE1F523F5EF0B0022F788 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		324FE1F723F5EF120022F788 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		325B2C8A2400578900E16804 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		325B2D0424008A8800E16804 /* NSPersistTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NSPersistTestModel.xcdatamodel; sourceTree = "<group>"; };
 		5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +154,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3237946B2412A03F00A722C8 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				32379468241296DF00A722C8 /* FetchRequest+ObjC.swift */,
+				3237946E2412A6B800A722C8 /* UpdateRequest+ObjC.swift */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
+		3237946C2412A05300A722C8 /* SwiftClasses */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* FetchRequest+Delete.swift */,
+				OBJ_10 /* FetchRequest.swift */,
+				OBJ_11 /* InsertRequest.swift */,
+				OBJ_15 /* UpdateRequest.swift */,
+			);
+			path = SwiftClasses;
+			sourceTree = "<group>";
+		};
+		3237946D2412A09400A722C8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* NSContext+Extension.swift */,
+				OBJ_13 /* NSManagedObject+Extension.swift */,
+				OBJ_14 /* NSPersist.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		324FE1C823F5EB710022F788 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +191,8 @@
 				325B2C8A2400578900E16804 /* NoteTableViewCell.swift */,
 				5BA2C9F123FBD95E008EDD21 /* NotesViewController.swift */,
 				5BA2C9F323FBDB76008EDD21 /* AddEditNoteTableViewController.swift */,
-				325B2C8824004F7A00E16804 /* FavoritesTableViewController.swift */,
+				323794652412913900A722C8 /* FavoritesViewController.h */,
+				323794662412913900A722C8 /* FavoritesViewController.m */,
 				324FE1DB23F5EB940022F788 /* LaunchScreen.storyboard */,
 				324FE1DF23F5EB950022F788 /* Main.storyboard */,
 				324FE1D223F5EB720022F788 /* Assets.xcassets */,
@@ -226,13 +262,9 @@
 		OBJ_8 /* NSPersist */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* FetchRequest+Delete.swift */,
-				OBJ_10 /* FetchRequest.swift */,
-				OBJ_11 /* InsertRequest.swift */,
-				OBJ_15 /* UpdateRequest.swift */,
-				OBJ_12 /* NSContext+Extension.swift */,
-				OBJ_13 /* NSManagedObject+Extension.swift */,
-				OBJ_14 /* NSPersist.swift */,
+				3237946D2412A09400A722C8 /* Core */,
+				3237946C2412A05300A722C8 /* SwiftClasses */,
+				3237946B2412A03F00A722C8 /* ObjC */,
 			);
 			path = NSPersist;
 			sourceTree = "<group>";
@@ -377,9 +409,9 @@
 				5BA2C9F223FBD95E008EDD21 /* NotesViewController.swift in Sources */,
 				324FE1F823F5EF120022F788 /* AppDelegate.swift in Sources */,
 				324FE1F623F5EF0B0022F788 /* SceneDelegate.swift in Sources */,
-				325B2C8924004F7A00E16804 /* FavoritesTableViewController.swift in Sources */,
 				5BA2C9F423FBDB76008EDD21 /* AddEditNoteTableViewController.swift in Sources */,
 				325B2C8B2400578900E16804 /* NoteTableViewCell.swift in Sources */,
+				323794672412913900A722C8 /* FavoritesViewController.m in Sources */,
 				5BA2C9F723FBDCA1008EDD21 /* NSExampleNoteModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,8 +426,10 @@
 				325B2D0624008AD100E16804 /* NSPersistTestModel.xcdatamodeld in Sources */,
 				OBJ_32 /* NSContext+Extension.swift in Sources */,
 				OBJ_33 /* NSManagedObject+Extension.swift in Sources */,
+				3237946F2412A6B800A722C8 /* UpdateRequest+ObjC.swift in Sources */,
 				OBJ_34 /* NSPersist.swift in Sources */,
 				OBJ_35 /* UpdateRequest.swift in Sources */,
+				3237946A241297BD00A722C8 /* FetchRequest+ObjC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +510,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -543,6 +578,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -573,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -607,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -644,6 +682,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = NO;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -668,6 +707,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD = /usr/bin/true;
@@ -686,6 +726,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -707,6 +748,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD = /usr/bin/true;
@@ -721,6 +763,7 @@
 		OBJ_45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -728,6 +771,7 @@
 		OBJ_46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEFINES_MODULE = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -736,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -762,6 +807,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = UL53AFK9P6;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
