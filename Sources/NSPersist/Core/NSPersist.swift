@@ -12,7 +12,6 @@ import CoreData
  NSPersistentContainer wrapper.
  */
 @available(iOS 10, macOS 10.12, watchOS 3.0, tvOS 10, *)
-@objc
 public final class NSPersist: NSPersistentContainer {
     
     private static var containerName: String!
@@ -32,14 +31,12 @@ public final class NSPersist: NSPersistentContainer {
      - Parameter name: Core Data Model name to be used.
      - Parameter configurations: Additional configurations to load, if any.
      */
-    @objc
     public class func setup(withName name: String, configurations: [String] = []) {
         self.containerName = name
         self.configurations = configurations
     }
     
     /// Singleton shared instance of NSPersist.
-    @objc
     public static let shared: NSPersist = {
         
         let container = NSPersist(name: containerName)
@@ -61,7 +58,6 @@ public final class NSPersist: NSPersistentContainer {
         return container
     }()
     
-    @objc
     private static func loadConfigurations(in container: NSPersist) {
         
         if let storeURL = storeURL {
@@ -84,7 +80,6 @@ public final class NSPersist: NSPersistentContainer {
      
      You can use this to perform undo and redo operations.
      */
-    @objc
     public static let undoManager: UndoManager = {
         return UndoManager()
     }()
@@ -96,7 +91,6 @@ public final class NSPersist: NSPersistentContainer {
      
      - Parameter backgroundContext: Specify which context to use to save changes, default is main context.
      */
-    @objc
     public func saveContext(backgroundContext: NSManagedObjectContext? = nil) {
         
         let context = backgroundContext ?? viewContext

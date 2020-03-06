@@ -53,13 +53,6 @@ NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
     request.sortDescriptors = [.init(key: "createdAt", ascending: false)]
 }).get()
 ```
-**Example usage of get request or `fetch` in Objective-C**
-```objective-c
-NSArray *favorites = [[[NSPersist shared] requestWithEntityName:@"NSExampleNote" completion:^(NSFetchRequest<NSManagedObject *> * _Nonnull request) {
-    request.predicate = [NSPredicate predicateWithFormat:@"favorite = true"];
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:false]];
-}] get];
-```
 *As I said this is a lightweight wrapper, you are still working with the `NSFetchRequest` that you get from the completion block.*
 
 ## Instalation
@@ -67,7 +60,7 @@ Currently NSPersist is only available through Swift Package Manager.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "0.0.8")
+.package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "1.0.0")
 ]
 ```
 ## License

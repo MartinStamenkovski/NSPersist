@@ -9,7 +9,6 @@
 import CoreData
 
 @available(iOS 10, OSX 10.12, watchOS 3.0, tvOS 10, *)
-@objc
 extension NSManagedObject {
     
     /**
@@ -19,13 +18,11 @@ extension NSManagedObject {
      
      - Parameter context: Specify which context to use to save changes, default is main context.
      */
-    @objc
     public func save(context: NSManagedObjectContext? = nil) {
         NSPersist.shared.saveContext(backgroundContext: context)
     }
     
     /// Create request from the current NSManagedObject.
-    @objc
     private func request() -> NSFetchRequest<NSManagedObject>? {
         guard let entityName = self.entity.name else { return nil }
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
@@ -39,7 +36,6 @@ extension NSManagedObject {
         The block to execute when deletion finishes.
         The block takes one parameter Bool, true if the request is success or false.
      */
-    @objc
     public func delete(_ completion: ((Bool) -> Void)? = nil) {
         guard let request = request() else {
             completion?(false)

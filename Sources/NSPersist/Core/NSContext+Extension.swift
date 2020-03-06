@@ -12,13 +12,11 @@ import CoreData
 extension NSManagedObjectContext {
     
     /// Main context.
-    @objc
     public class var main: NSManagedObjectContext {
         return NSPersist.shared.viewContext
     }
     
     /// Creates and returns new background context.
-    @objc
     public class func newBackgroundContext() -> NSManagedObjectContext {
         return NSPersist.shared.newBackgroundContext()
     }
