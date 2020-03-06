@@ -8,7 +8,8 @@
 #import "FavoritesViewController.h"
 
 #if TARGET_OS_IPHONE
-#import "NSPersist/NSPersist-Swift.h"
+@import CoreData;
+@import NSPersist;
 #endif
 
 @interface FavoritesViewController ()
