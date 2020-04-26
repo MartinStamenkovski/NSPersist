@@ -45,7 +45,7 @@ public extension FetchRequest {
         The block to execute  after the request finishes.
         This block takes one parameter Bool, true if the request is successful or false.
      */
-    func deleteAsync(completion: @escaping ((Bool) -> Void)) {
+    func deleteAsync(_ completion: @escaping ((Bool) -> Void)) {
         
         guard let fetchRequest = self.fetchRequest as? NSFetchRequest<NSFetchRequestResult> else { return }
         

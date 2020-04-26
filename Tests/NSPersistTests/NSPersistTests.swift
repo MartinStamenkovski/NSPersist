@@ -36,7 +36,7 @@ class NSPersistTests: XCTestCase {
         XCTAssertNotNil(countResult)
         XCTAssertNotNil(countResult?.first)
         XCTAssertNotNil(countResult?.first?["count"])
-        XCTAssertTrue(countResult?.first?["count"] is Int64)
+        XCTAssertTrue(countResult?.first?["count"] as! Int64 == 3)
     }
     
     func testSum() {

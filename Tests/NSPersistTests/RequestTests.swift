@@ -47,10 +47,10 @@ class RequestTest: XCTestCase {
                 request.predicate = NSPredicate(format: "name = %@", "Test Name")
                 _ = captureObject
             })
-            .getAsync(completion: { [weak captureObject] users in
+            .getAsync { [weak captureObject] users in
                 _ = captureObject
                 expectation.fulfill()
-            })
+            }
         
         wait(for: [expectation], timeout: 1)
         captureObject = NSObject()
