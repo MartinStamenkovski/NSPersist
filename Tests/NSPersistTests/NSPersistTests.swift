@@ -13,154 +13,40 @@ import XCTest
 class NSPersistTests: XCTestCase {
     
     override func setUp() {
+        super.setUp()
         NSPersist.setup(withName: "NSPersistTestModel")
+        for i in 0..<3 {
+            let user = NSTestUser(context: .main)
+            user.name = "\(i)"
+            user.booksRead = Int32(i)
+        }
+        NSPersist.shared.saveContext()
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        NSPersist.shared.fetch(NSTestUser.self).delete()
+        super.tearDown()
     }
     
-    func testPersistentContainerSetup() {
-        
-        XCTAssertNotNil(NSPersist.shared)
-    }
-    
-    func testInsertRecord() {
+    func testCount() {
         XCTAssertNotNil(NSPersist.shared)
         
-        let user = NSTestUser(context: .main)
-        user.name = "Test User"
-        user.save()
-        
-        let users = NSPersist.shared.fetch(NSTestUser.self).get()
-        
-        XCTAssertNotNil(users.last)
-        XCTAssertEqual(users.last?.name, "Test User")
+        let countResult = NSTestUser.aggregate(for: "name", type: .count)
+        XCTAssertNotNil(countResult)
+        XCTAssertNotNil(countResult?.first)
+        XCTAssertNotNil(countResult?.first?["count"])
+        XCTAssertTrue(countResult?.first?["count"] is Int64)
     }
     
-    func testAsyncRequestNoRetainCycle() {
-        
+    func testSum() {
         XCTAssertNotNil(NSPersist.shared)
         
-        var captureObject = NSObject()
-        weak var weakObject = captureObject
-        
-        
-        let expectation = self.expectation(description: "async_request")
-        _ = NSPersist
-            .shared
-            .fetch(NSTestUser.self, completion: {[captureObject] (request) in
-                request.predicate = NSPredicate(format: "name = %@", "Test Name")
-                _ = captureObject
-            })
-            .getAsync(completion: { [weak captureObject] users in
-                _ = captureObject
-                expectation.fulfill()
-            })
-        
-        wait(for: [expectation], timeout: 1)
-        captureObject = NSObject()
-        XCTAssertNil(weakObject)
+        let sumResult = NSTestUser.aggregate(for: "booksRead", type: .sum)
+        XCTAssertNotNil(sumResult)
+        XCTAssertNotNil(sumResult?.first?["sum"])
+        XCTAssertTrue(sumResult?.first?["sum"] as! Int64 == 3)
     }
     
-    func testFetchRequestNoRetainCycle() {
-        
-        XCTAssertNotNil(NSPersist.shared)
-        
-        var captureObject = NSObject()
-        weak var weakObject = captureObject
-        
-        let expectation = self.expectation(description: "fetchrequest")
-        
-        _ = NSPersist
-            .shared
-            .fetch(NSTestUser.self, completion: {[captureObject] (request) in
-                request.predicate = NSPredicate(format: "name = %@", "Martin")
-                _ = captureObject
-                expectation.fulfill()
-            })
-            .get()
-        
-        wait(for: [expectation], timeout: 1)
-        captureObject = NSObject()
-        XCTAssertNil(weakObject)
-    }
-    
-    
-    func testUpdateBatchAsyncNoRetainCycle() {
-        
-        XCTAssertNotNil(NSPersist.shared)
-        
-        var captureObject = NSObject()
-        weak var weakObject = captureObject
-        
-        let expectation = self.expectation(description: "update_async")
-        
-        NSPersist
-            .shared
-            .update(NSTestUser.self) { (request) in
-                request.predicate = NSPredicate(format: "name = %@", "Test Name")
-                request.propertiesToUpdate = ["name" : "User Update"]
-        }.updateBatchAsync {[captureObject] _ in
-            _ = captureObject
-            expectation.fulfill()
-        }
-        
-        wait(for: [expectation], timeout: 1)
-        captureObject = NSObject()
-        XCTAssertNil(weakObject)
-    }
-    
-    @available(iOS 13, macOS 10.15, tvOS 13, *)
-    func testBatchInsertAsyncNoRetainCycle() {
-        
-        XCTAssertNotNil(NSPersist.shared)
-        
-        var captureObject = NSObject()
-        weak var weakObject = captureObject
-        
-        let expectation = self.expectation(description: "batch_insert")
-        
-        let users = [
-            [
-                "name" : "Test",
-            ],
-            [
-                "name" : "Another user",
-            ]
-        ]
-        
-        NSPersist
-            .shared
-            .insertBatchAsync(NSTestUser.self, values: users) { [captureObject] _ in
-                _ = captureObject
-                expectation.fulfill()
-        }
-        
-        wait(for: [expectation], timeout: 1)
-        captureObject = NSObject()
-        XCTAssertNil(weakObject)
-    }
-    
-    func testDeleteAsyncNoRetainCycle() {
-        
-        XCTAssertNotNil(NSPersist.shared)
-        
-        var captureObject = NSObject()
-        weak var weakObject = captureObject
-        
-        let expectation = self.expectation(description: "delete_async")
-        
-        NSPersist
-            .shared
-            .fetch(NSTestUser.self)
-            .deleteAsync {[captureObject] (didDelete) in
-                _ = captureObject
-                expectation.fulfill()
-        }
-        
-        wait(for: [expectation], timeout: 1)
-        captureObject = NSObject()
-        XCTAssertNil(weakObject)
-    }
+   
 }

@@ -55,14 +55,14 @@ public final class FetchRequest<T> where T: NSManagedObject {
     }
     
     /**
-    Perform fetch request asynchronously.
-    
-    - Parameter completion:
-        The block to execute when the request finishes.
+     Perform fetch request asynchronously.
      
-        The block takes one parameter, array of objects that match with the provided object and specified criteria, or nil if error occurred.
-    */
-    public func getAsync(completion: @escaping(([T]?) -> Void)) {
+     - Parameter completion:
+     The block to execute when the request finishes.
+     
+     The block takes one parameter, array of objects that match with the provided object and specified criteria, or nil if error occurred.
+     */
+    public func getAsync(_ completion: @escaping(([T]?) -> Void)) {
         let mainContext = NSPersist.shared.viewContext
         let backgroundContext = NSPersist.shared.newBackgroundContext()
         
@@ -79,12 +79,14 @@ public final class FetchRequest<T> where T: NSManagedObject {
             }
         }
         
-        do {
-            try backgroundContext.execute(asyncRequest)
-        } catch {
-            #if DEBUG
-            fatalError(error.localizedDescription)
-            #endif
+        backgroundContext.perform {
+            do {
+                try backgroundContext.execute(asyncRequest)
+            } catch {
+                #if DEBUG
+                fatalError(error.localizedDescription)
+                #endif
+            }
         }
     }
 }

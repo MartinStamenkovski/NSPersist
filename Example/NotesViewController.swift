@@ -34,14 +34,6 @@ class NotesViewController: UIViewController {
         self.tableView.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let grouped = NSExampleNote.aggregate(groupBy: ["title"], for: "totalEdits", type: .average) { request in
-            //request.fetchLimit = 1
-        }
-        print(grouped)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editNoteVC = segue.destination as? AddEditNoteTableViewController {
             editNoteVC.note = sender as? NSExampleNote

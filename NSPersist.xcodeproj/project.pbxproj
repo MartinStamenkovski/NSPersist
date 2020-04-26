@@ -22,7 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		3222EF3B2455CC6600BD29BE /* NSManagedObject+Aggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222EF3A2455CC6600BD29BE /* NSManagedObject+Aggregate.swift */; };
-		3222EF3E2455DED400BD29BE /* AggregateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222EF3C2455DDFF00BD29BE /* AggregateTests.swift */; };
+		3222EF412455E56B00BD29BE /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222EF3F2455E53B00BD29BE /* RequestTests.swift */; };
 		32315AE92412DAAA00342588 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315AE82412DAAA00342588 /* FavoritesTableViewController.swift */; };
 		3234790024013E3000F51933 /* NSTestUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */; };
 		323479642401601700F51933 /* NSPersist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NSPersist::NSPersist::Product" /* NSPersist.framework */; };
@@ -97,7 +97,7 @@
 
 /* Begin PBXFileReference section */
 		3222EF3A2455CC6600BD29BE /* NSManagedObject+Aggregate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Aggregate.swift"; sourceTree = "<group>"; };
-		3222EF3C2455DDFF00BD29BE /* AggregateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregateTests.swift; sourceTree = "<group>"; };
+		3222EF3F2455E53B00BD29BE /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		32315AE82412DAAA00342588 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTestUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		324FE1C723F5EB700022F788 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +214,7 @@
 				323478FF24013E3000F51933 /* NSTestUser+CoreDataClass.swift */,
 				325B2D0324008A8800E16804 /* NSPersistTestModel.xcdatamodeld */,
 				OBJ_18 /* NSPersistTests.swift */,
-				3222EF3C2455DDFF00BD29BE /* AggregateTests.swift */,
+				3222EF3F2455E53B00BD29BE /* RequestTests.swift */,
 			);
 			path = NSPersistTests;
 			sourceTree = "<group>";
@@ -435,8 +435,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				3222EF412455E56B00BD29BE /* RequestTests.swift in Sources */,
 				OBJ_53 /* NSPersistTests.swift in Sources */,
-				3222EF3E2455DED400BD29BE /* AggregateTests.swift in Sources */,
 				325B2D0524008A8800E16804 /* NSPersistTestModel.xcdatamodeld in Sources */,
 				3234790024013E3000F51933 /* NSTestUser+CoreDataClass.swift in Sources */,
 			);
