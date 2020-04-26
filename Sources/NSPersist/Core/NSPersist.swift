@@ -116,7 +116,7 @@ extension NSPersist {
      - Parameter object: NSManagedObject.
      - Parameter completion: The block to execute when NSFetchRequest is created, for further customization.
      */
-    public func request<T>(_ object: T.Type, completion: ((NSFetchRequest<T>) -> Void)? = nil) -> FetchRequest<T> where T: NSManagedObject {
+    public func fetch<T>(_ object: T.Type, completion: ((NSFetchRequest<T>) -> Void)? = nil) -> FetchRequest<T> where T: NSManagedObject {
         return FetchRequest.shared(object: object).fetch(completion: completion)
     }
     
@@ -142,5 +142,6 @@ extension NSPersist {
     public func insertBatchAsync<T>(_ object: T.Type, values: [[String: Any]], in context: NSManagedObjectContext = .newBackgroundContext(), completion: @escaping ((Bool) -> Void)) where T: NSManagedObject {
         return InsertRequest.shared(object: object).insertBatchAsync(values, context: context, completion: completion)
     }
+  
 }
 

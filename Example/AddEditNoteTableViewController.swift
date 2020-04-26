@@ -52,6 +52,7 @@ extension AddEditNoteTableViewController {
             note.title = textFieldTitle.text
             note.body = textFieldNote.text
             note.updatedAt = Date()
+            note.totalEdits += 1
             note.save()
             return true
         }

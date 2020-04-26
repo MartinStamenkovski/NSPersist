@@ -7,9 +7,7 @@
 
 import UIKit
 import CoreData
-#if os(iOS)
 import NSPersist
-#endif
 
 class NotesViewController: UIViewController {
     
@@ -19,11 +17,10 @@ class NotesViewController: UIViewController {
         let notesRequest: NSFetchRequest<NSExampleNote> = NSExampleNote.fetchRequest()
         notesRequest.sortDescriptors = [.init(key: "updatedAt", ascending: false)]
         let controller = NSFetchedResultsController(fetchRequest: notesRequest, managedObjectContext: .main, sectionNameKeyPath: nil, cacheName: nil)
-        
         controller.delegate = self
         return controller
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +34,13 @@ class NotesViewController: UIViewController {
         self.tableView.dataSource = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let grouped = NSExampleNote.aggregate(groupBy: ["title"], for: "totalEdits", type: .average) { request in
+            //request.fetchLimit = 1
+        }
+        print(grouped)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editNoteVC = segue.destination as? AddEditNoteTableViewController {

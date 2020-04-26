@@ -13,4 +13,5 @@ import CoreData
 public class NSTestUser: NSManagedObject {
 
     @NSManaged public var name: String?
+    @NSManaged public var booksRead: Int32
 }

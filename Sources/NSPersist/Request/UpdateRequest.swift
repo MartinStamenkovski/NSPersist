@@ -55,7 +55,7 @@ public final class UpdateRequest<T> where T: NSManagedObject {
         }
     }
     
-    private func executeAsyncUpdate(with context: NSManagedObjectContext, _ completion: @escaping((Bool) -> Void)) {
+    private func executeAsyncUpdate(with context: NSManagedObjectContext, _ completion: @escaping ((Bool) -> Void)) {
         do {
             let result = try context.execute(batchUpdateRequest) as? NSBatchUpdateResult
             guard let objectIds = result?.result as? [NSManagedObjectID] else {

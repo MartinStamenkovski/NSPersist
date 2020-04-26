@@ -32,10 +32,7 @@ class NSPersistTests: XCTestCase {
         user.name = "Test User"
         user.save()
         
-        let users = NSPersist.shared.request(NSTestUser.self).get()
-        
-        XCTAssertNotNil(users)
-        XCTAssertTrue(users.count > 0)
+        let users = NSPersist.shared.fetch(NSTestUser.self).get()
         
         XCTAssertNotNil(users.last)
         XCTAssertEqual(users.last?.name, "Test User")
@@ -52,7 +49,7 @@ class NSPersistTests: XCTestCase {
         let expectation = self.expectation(description: "async_request")
         _ = NSPersist
             .shared
-            .request(NSTestUser.self, completion: {[captureObject] (request) in
+            .fetch(NSTestUser.self, completion: {[captureObject] (request) in
                 request.predicate = NSPredicate(format: "name = %@", "Test Name")
                 _ = captureObject
             })
@@ -77,7 +74,7 @@ class NSPersistTests: XCTestCase {
         
         _ = NSPersist
             .shared
-            .request(NSTestUser.self, completion: {[captureObject] (request) in
+            .fetch(NSTestUser.self, completion: {[captureObject] (request) in
                 request.predicate = NSPredicate(format: "name = %@", "Martin")
                 _ = captureObject
                 expectation.fulfill()
@@ -156,7 +153,7 @@ class NSPersistTests: XCTestCase {
         
         NSPersist
             .shared
-            .request(NSTestUser.self)
+            .fetch(NSTestUser.self)
             .deleteAsync {[captureObject] (didDelete) in
                 _ = captureObject
                 expectation.fulfill()

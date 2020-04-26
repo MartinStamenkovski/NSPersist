@@ -5,9 +5,8 @@
 //  Created by Martin Stamenkovski on 2/21/20.
 //
 import UIKit
-#if os(iOS)
 import NSPersist
-#endif
+
 class FavoritesTableViewController: UITableViewController {
 
     var favorites: [NSExampleNote] = []
@@ -19,7 +18,7 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     func fetchFavorites() {
-        self.favorites = NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
+        self.favorites = NSPersist.shared.fetch(NSExampleNote.self, completion: { (request) in
             request.predicate = NSPredicate(format: "favorite = %d", true)
             request.sortDescriptors = [.init(key: "createdAt", ascending: false)]
         }).get()

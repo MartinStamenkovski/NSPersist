@@ -20,4 +20,5 @@ extension NSManagedObjectContext {
     public class func newBackgroundContext() -> NSManagedObjectContext {
         return NSPersist.shared.newBackgroundContext()
     }
+    
 }
