@@ -24,9 +24,18 @@ class NSPersistTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        NSPersist.shared.fetch(NSTestUser.self).delete()
+        NSPersist.shared.request(NSTestUser.self).delete()
+        
         super.tearDown()
+    }
+    
+    func testAverage() {
+        XCTAssertNotNil(NSPersist.shared)
+        let countResult = NSTestUser.aggregate(for: "booksRead", type: .average)
+        XCTAssertNotNil(countResult)
+        XCTAssertNotNil(countResult?.first)
+        XCTAssertNotNil(countResult?.first?["average"])
+        XCTAssertTrue(countResult?.first?["average"] as! Int64 == 1)
     }
     
     func testCount() {
@@ -48,5 +57,21 @@ class NSPersistTests: XCTestCase {
         XCTAssertTrue(sumResult?.first?["sum"] as! Int64 == 3)
     }
     
-   
+    func testMax() {
+        XCTAssertNotNil(NSPersist.shared)
+        let countResult = NSTestUser.aggregate(for: "booksRead", type: .max)
+        XCTAssertNotNil(countResult)
+        XCTAssertNotNil(countResult?.last)
+        XCTAssertNotNil(countResult?.last?["max"])
+        XCTAssertTrue(countResult?.last?["max"] as! Int64 == 2)
+    }
+    
+    func testMin() {
+        XCTAssertNotNil(NSPersist.shared)
+        let countResult = NSTestUser.aggregate(for: "booksRead", type: .min)
+        XCTAssertNotNil(countResult)
+        XCTAssertNotNil(countResult?.last)
+        XCTAssertNotNil(countResult?.last?["min"])
+        XCTAssertTrue(countResult?.last?["min"] as! Int64 == 0)
+    }
 }

@@ -1,68 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 10,
-      "symbol": "Key",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 12,
-      "symbol": "Aggregate",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 13,
-      "symbol": "Aggregate.average",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 14,
-      "symbol": "Aggregate.count",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 15,
-      "symbol": "Aggregate.sum",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 16,
-      "symbol": "Aggregate.max",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 17,
-      "symbol": "Aggregate.min",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Aggregate.swift",
-      "line": 53,
-      "symbol": "NSManagedObject.aggregate(groupBy:for:type:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist/Sources/NSPersist/Core/NSManagedObject+Extension.swift",
-      "line": 65,
-      "symbol": "NSManagedObject.group(by:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/martinstamenkovski/Documents/iOS/iOS_Libs/NSPersist"
 }

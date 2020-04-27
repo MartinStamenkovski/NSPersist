@@ -18,7 +18,7 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     func fetchFavorites() {
-        NSPersist.shared.fetch(NSExampleNote.self, completion: { (request) in
+        NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
             request.predicate = NSPredicate(format: "favorite = %d", true)
             request.sortDescriptors = [.init(key: "createdAt", ascending: false)]
         }).getAsync { [weak self] notes in

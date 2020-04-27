@@ -1,5 +1,5 @@
 <p align="center">
- <img width="600" src="https://github.com/MartinStamenkovski/NSPersist/blob/master/logo.png">
+ <img width="600" src="https://raw.githubusercontent.com/MartinStamenkovski/NSPersist/master/logo.png">
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 - [x] UndoManager
 - [x] Lightweight migrations.
 - [x] Multiple store configurations
-- [x] Objective-C
+- [x] Aggregate functions
 
 
 ## Usage
@@ -46,7 +46,7 @@ note.save()
 ```
 As you can see the main context is accessible via `.main` property, and `note.save()` inserts in the main context by default,  or you can specify another context in its parameter like this `note.save(context: backgroundContext)`.  
 
-**Example usage of get request or `fetch` in Swift**
+**Example usage of get request or `fetch`**
 ```swift
 NSPersist.shared.request(NSExampleNote.self, completion: { (request) in
     request.predicate = NSPredicate(format: "favorite = %d", true)
@@ -60,7 +60,7 @@ Currently NSPersist is only available through Swift Package Manager.
 
 ```swift
 dependencies: [
-.package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "1.0.0")
+   .package(url: "https://github.com/MartinStamenkovski/NSPersist.git", from: "1.1.0")
 ]
 ```
 ## License

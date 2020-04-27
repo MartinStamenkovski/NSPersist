@@ -116,7 +116,7 @@ extension NSPersist {
      - Parameter object: NSManagedObject.
      - Parameter completion: The block to execute when NSFetchRequest is created, for further customization.
      */
-    public func fetch<T>(_ object: T.Type, completion: ((NSFetchRequest<T>) -> Void)? = nil) -> FetchRequest<T> where T: NSManagedObject {
+    public func request<T>(_ object: T.Type, completion: ((NSFetchRequest<T>) -> Void)? = nil) -> FetchRequest<T> where T: NSManagedObject {
         return FetchRequest.shared(object: object).fetch(completion: completion)
     }
     
