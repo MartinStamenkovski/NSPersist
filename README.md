@@ -26,7 +26,6 @@ I created this wrapper mostly to ease my workflow in the projects, if you find i
 - [x] Multiple store configurations
 - [x] Aggregate functions
 
-
 ## Usage
 
 Check out the [Documentation](https://martinstamenkovski.github.io/NSPersist/) for more information.
